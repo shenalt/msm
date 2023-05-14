@@ -12,7 +12,25 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        rnf: ["RNF", "serif"],
+      },
+      transformOrigin: {
+        'transform-4px': '4px',
+      },
+    },
+    colors: {
+      twitterBlue: '#1DA1F2',
+      youtubeRed: '#c4302b',
+      instagramPurple: '#833AB4',
+      spotifyGreen: '#1DB954',
+      msmRed: '#EC5151',
+      msmBlue: '#05E1EF',
+      msmYellow: '#F7CA3D',
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: false,
+  },
 }
