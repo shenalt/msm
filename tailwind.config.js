@@ -16,7 +16,29 @@ module.exports = {
         rnf: ["RNF", "serif"],
       },
       transformOrigin: {
-        'transform-4px': '4px',
+        'transform-1Halfpx': '1.5px',
+      },
+      keyframes: {
+        bounceFrontPage: {
+          '0%': {
+            transform: 'translateY(-5%)',
+            'animation-timing-function': 'cubic-bezier(0.8,0,1,1)',
+          },
+          '50%': {
+            transform: 'none',
+            'animation-timing-function': 'cubic-bezier(0,0,0.2,1)',
+          },
+          '100%': {
+            transform: 'translateY(-5%)',
+            'animation-timing-function': 'cubic-bezier(0.8,0,1,1)',
+          },
+        },
+      },
+      animation: {
+        'bounceFP': 'bounceFrontPage 3s linear infinite',
+      },
+      maxWidth: {
+        'full-card': '600px',
       },
     },
     colors: {
@@ -24,9 +46,13 @@ module.exports = {
       youtubeRed: '#c4302b',
       instagramPurple: '#833AB4',
       spotifyGreen: '#1DB954',
+      applePurple: '#D56DFB',
       msmRed: '#EC5151',
       msmBlue: '#05E1EF',
       msmYellow: '#F7CA3D',
+      bkgColor: '#fef6e4',
+      navColor: '#FEF8EB',
+      collapseColor: "#FEF7E7",
     },
   },
   plugins: [require("daisyui")],

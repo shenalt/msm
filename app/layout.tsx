@@ -1,5 +1,6 @@
 import './globals.css'
 import Nav from './components/Nav'
+import Footer from './components/Footer'
 
 export const metadata = {
   title: 'Many Sided Media Company',
@@ -13,9 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-rnf lg:w-10/12 m-auto bg-white">
+      <body className="font-rnf w-full m-auto bg-bkgColor">
         <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   )
