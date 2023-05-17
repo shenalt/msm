@@ -88,7 +88,7 @@ export default function Nav(){
                             <SiApplepodcasts className="cursor-pointer hover:fill-applePurple" />
                         </div>
                         <Link 
-                            href={'/temp'}
+                            href={'/aboutus'}
                             onClick={() => {
                                 setIsOpen(!isOpen);
                                 setScroll(isOpen);
