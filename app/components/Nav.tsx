@@ -5,7 +5,7 @@ import logo from "../../public/Logo_Large.png"
 import {FaTwitter, FaYoutube, FaInstagram, FaSpotify,} from "react-icons/fa"
 import { SiApplepodcasts } from "react-icons/si"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useState, } from "react"
 import { motion } from "framer-motion"
 
 const disableScroll = () => {
@@ -26,10 +26,6 @@ const enableScroll = () => {
 export default function Nav(){
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
-    useEffect(() => {
-        
-    }, [])
-
     const setScroll = (isOpen: boolean) => {
         if(!isOpen){
             disableScroll()
@@ -40,18 +36,27 @@ export default function Nav(){
 
     return(
         // LOGO
-        <nav className="flex-row flex items-center justify-between bg-bkgColor">
-            <div className="flex items-center gap-8 p-3 md:p-5">
+        <nav className="flex-row flex items-center justify-between bg-bkgColor border-b">
+            <motion.div 
+                className="flex items-center gap-8 p-4 md:p-5 cursor-pointer"
+                whileHover={{
+                    scale: 1.25,
+                    transition: { duration: 0.5 },
+                }}
+                whileTap={{ 
+                    scale: 0.9, 
+                }}
+            >
                 <Link href={"/"}>
                     <Image 
                         src={logo} 
                         alt="Logo for Multi Sided Media" 
-                        className="rounded-sm cursor-pointer"  
+                        className="rounded-sm"  
                         width={125}
                         height={125}
                     />
                 </Link>
-            </div>
+            </motion.div>
         {/* HAMBURGER MENU */}
             <div>   
                 {/* 3 LINES */}
@@ -80,55 +85,14 @@ export default function Nav(){
                         className={`w-full ${isOpen ? "translate-x-0" : "translate-x-[100%]"} transition-all duration-300 lg:w-2/6 flex flex-col justify-center bg-navColor h-screen text-left p-8 absolute top-0 right-0`}
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="flex gap-8 items-center justify-center my-10">
-                            <FaTwitter className="cursor-pointer hover:fill-twitterBlue" />
-                            <FaYoutube className="cursor-pointer hover:fill-youtubeRed" />
-                            <FaInstagram className="cursor-pointer hover:fill-instagramPurple" />
-                            <FaSpotify className="cursor-pointer hover:fill-spotifyGreen" />
-                            <SiApplepodcasts className="cursor-pointer hover:fill-applePurple" />
+                        <div className="flex gap-8 items-center justify-center mb-10">
+                            <FaTwitter className="cursor-pointer hover:fill-twitterBlue transition-all duration-500" />
+                            <FaYoutube className="cursor-pointer hover:fill-youtubeRed transition-all duration-500" />
+                            <FaInstagram className="cursor-pointer hover:fill-instagramPurple transition-all duration-500" />
+                            <FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" />
+                            <SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" />
                         </div>
-                        <Link 
-                            href={'/aboutus'}
-                            onClick={() => {
-                                setIsOpen(!isOpen);
-                                setScroll(isOpen);
-                            }}
-                        >
-                            <motion.p 
-                                className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 lg:my-10`}
-                                whileHover={{
-                                    scale: 1.2,
-                                    transition: { duration: 0.1 },
-                                }}
-                                whileTap={{ 
-                                    scale: 0.9, 
-                                }}
-                            >
-                                ABOUT US
-                            </motion.p>
-                        </Link> 
-                        <Link 
-                            href={'/contactus'}
-                            onClick={() => {
-                                setIsOpen(!isOpen);
-                                setScroll(isOpen);
-                            }}
-                        >
-                            <motion.p 
-                                className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 lg:my-10`}
-                                whileHover={{
-                                    scale: 1.2,
-                                    transition: { duration: 0.25 },
-                                }}
-                                whileTap={{ 
-                                    scale: 0.9, 
-                                }}
-                            >
-                                WORK WITH US
-                            </motion.p>
-                        </Link>
-                         
-                        <div className="dropdown dropdown-end cursor-pointer">
+                        <div className="dropdown dropdown-end cursor-pointer my-10">
                             <motion.div 
                                 className="flex flex-row items-center justify-center"
                                 whileHover={{
@@ -140,14 +104,14 @@ export default function Nav(){
                                 }}
                             >
                                 <p 
-                                    className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 text-2xl py-4 font-bold tracking-wide no-underline text-center mt-6 lg:mt-10 mx-4`}
+                                    className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 hover:text-msmYellow transition-all text-2xl font-bold tracking-wide no-underline text-center mx-2`}
                                     tabIndex={0}
                                 >
                                     OUR SHOWS
                                 </p> 
-                                <svg tabIndex={0} className="dropdown dropdown-end cursor-pointer mt-6 lg:mt-10" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="arrow-drop-down"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7 10l5 5 5-5H7z"></path></svg>
+                                <svg tabIndex={0} className="dropdown dropdown-end cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="arrow-drop-down"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7 10l5 5 5-5H7z"></path></svg>
                             </motion.div>
-                            <ul tabIndex={0} className="dropdown-content menu-compact lg:menu p-4 space-y-4 shadow rounded-box w-full text-center bg-twitterBlue">
+                            <ul tabIndex={0} className="dropdown-content menu p-4 space-y-4 shadow rounded-box w-full text-center bg-msmYellow">
                                 <Link
                                     href={'/twentysidedpodcast'}
                                     onClick={() => {
@@ -155,7 +119,7 @@ export default function Nav(){
                                         setScroll(isOpen);
                                     }}
                                 >
-                                    <li>Twenty Sided Podcast</li>
+                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500">Twenty Sided Podcast</li>
                                 </Link>
                                 <Link 
                                     href={'/myfirstdungeon'}
@@ -164,10 +128,52 @@ export default function Nav(){
                                         setScroll(isOpen);
                                     }}
                                 >
-                                    <li>My First Dungeon</li>
+                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500">My First Dungeon</li>
                                 </Link>
                             </ul>
                         </div>
+                        <Link 
+                            href={'/aboutus'}
+                            onClick={() => {
+                                setIsOpen(!isOpen);
+                                setScroll(isOpen);
+                            }}
+                        >
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.5 },
+                                }}
+                                whileTap={{ 
+                                    scale: 0.9, 
+                                }}
+                            >
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmRed duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-10`}>
+                                    ABOUT US
+                                </p>
+                            </motion.div>
+                        </Link> 
+                        <Link 
+                            href={'/contactus'}
+                            onClick={() => {
+                                setIsOpen(!isOpen);
+                                setScroll(isOpen);
+                            }}
+                        >
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.5 },
+                                }}
+                                whileTap={{ 
+                                    scale: 0.9, 
+                                }}
+                            >
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmBlue duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 lg:my-10`}>
+                                    WORK WITH US
+                                </p>
+                            </motion.div>
+                        </Link>                        
                     </div>
                 </div>
                 {/* MENU */}

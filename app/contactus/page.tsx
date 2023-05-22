@@ -29,7 +29,6 @@ export default function ContactUs(){
         emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, e.currentTarget, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
           .then((result) => {
             showToastMessage(true)
-            console.log(result.text)
           }, (error) => {
             showToastMessage(false)
             console.log(error.text)
@@ -44,8 +43,8 @@ export default function ContactUs(){
         <div className="z-10 w-full flex flex-col">
             <ToastContainer />
             <div className='flex flex-col items-center justify-center'>
-            <h1 className="mt-8 mx-4">Prospective players, game designers, press outlets, fans, buds, or anyone else can contact us by filling out the form below!</h1>
-                <form className='w-11/12 lg:w-2/4 border m-8 p-8 rounded-lg' ref={form} onSubmit={sendEmail}>
+            <h1 className="m-8 text-xl">Prospective players, game designers, press outlets, fans, buds, or anyone else can contact us by filling out the form below!</h1>
+                <form className='w-11/12 xl:w-2/4 border m-8 p-8 rounded-lg bg-msmYellow' autoComplete='off' ref={form} onSubmit={sendEmail}>
                     <div className="form-control items-center justify-center my-4">
                         <label htmlFor='name' className="label">
                             <span className="label-text">Name</span>
@@ -55,7 +54,7 @@ export default function ContactUs(){
                             placeholder="Name" 
                             name='name'
                             id='name'
-                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5" 
+                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmRed text-neutral-50 placeholder:text-neutral-700" 
                             required 
                             onChange={e => setName(e.currentTarget.value)}
                         />
@@ -69,7 +68,7 @@ export default function ContactUs(){
                             placeholder="Email" 
                             name='email'
                             id='email'
-                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5"
+                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmBlue text-neutral-900 placeholder:text-neutral-500"
                             required 
                             onChange={e => setEmail(e.currentTarget.value)}
                         />
@@ -77,7 +76,7 @@ export default function ContactUs(){
                     <div className='form-control items-center justify-center my-4'>
                         <label className="label" htmlFor='whoSending'>Who are you?</label>
                         <select 
-                            className="select select-bordered w-full sm:w-3/4 lg:w-3/5" 
+                            className="select select-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmRed text-neutral-50" 
                             name='whoSending' 
                             id='whoSending'
                         >
@@ -96,7 +95,7 @@ export default function ContactUs(){
                             placeholder="Subject" 
                             name='subject'
                             id='subject'
-                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5" 
+                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmBlue text-neutral-900 placeholder:text-neutral-500" 
                             required 
                         />
                     </div>
@@ -105,7 +104,7 @@ export default function ContactUs(){
                             <span className="label-text">Message</span>
                         </label> 
                         <textarea 
-                            className="textarea w-full sm:w-3/4 lg:w-3/5 h-80 textarea-bordered" 
+                            className="textarea w-full sm:w-3/4 lg:w-3/5 h-80 textarea-bordered bg-msmRed text-neutral-50 placeholder:text-neutral-700" 
                             placeholder="Message" 
                             name='message'
                             id='message'
@@ -115,7 +114,12 @@ export default function ContactUs(){
                         </textarea>
                     </div>
                     <div className='form-control items-center justify-center'>
-                        <button type='submit' className={`btn ${name === '' || email === '' || message === '' ? 'btn-disabled' : ''}`}>Submit</button>
+                        <button 
+                            type='submit' 
+                            className={`btn ${name === '' || email === '' || message === '' ? 'btn-disabled' : 'text-neutral-900'} my-4 bg-msmYellowTetraGreen hover:bg-msmYellowTetraGreen hover:scale-125 transition-all duration-500`}
+                        >
+                            Submit
+                        </button>
                     </div>
                 </form>
             </div>
