@@ -4,13 +4,13 @@ import Image from "next/image"
 import Link from "next/link"
 import myFirstDungeon from "../../public/myFirstDungeon/firstDungeon.jpg"
 import myFirstDungeonCardImg from "../../public/myFirstDungeon/myFirstDungeonTwo.png"
-import candles from "../../public/myFirstDungeon/tenCandles.JPEG"
-import schroedinger from "../../public/myFirstDungeon/playtest.JPEG"
+// import candles from "../../public/myFirstDungeon/tenCandles.JPEG"
+// import schroedinger from "../../public/myFirstDungeon/playtest.JPEG"
 import defendLair from "../../public/myFirstDungeon/defendYourLair.jpg"
 import die from "../../public/myFirstDungeon/die.png"
 import anamnesis from "../../public/myFirstDungeon/Anamnesis.png"
 import wanderHome from "../../public/myFirstDungeon/Wanderhome.png"
-import chickens from "../../public/myFirstDungeon/chickens.PNG"
+// import chickens from "../../public/myFirstDungeon/chickens.PNG"
 import honey from "../../public/myFirstDungeon/honeyHeist.png"
 import {FaSpotify,} from "react-icons/fa"
 import { SiApplepodcasts } from "react-icons/si"
@@ -244,7 +244,7 @@ export default function MyFirstDungeon(){
                 </div>
                 <div className="collapse-content">
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={schroedinger} alt="Playtest Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="Playtest Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Talkback w/ Elliot Davis</h2> 
                             <h6 className="text-xs my-2">February 24th, 2023</h6>
@@ -261,7 +261,7 @@ export default function MyFirstDungeon(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={schroedinger} alt="Playtest Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="Playtest Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Actual Play - Part 2 of 2</h2> 
                             <h6 className="text-xs my-2">February 17th, 2023</h6>
@@ -277,7 +277,7 @@ export default function MyFirstDungeon(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={schroedinger} alt="Playtest Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="Playtest Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Actual Play - Part 1 of 2</h2> 
                             <h6 className="text-xs my-2">February 10th, 2023</h6>
@@ -292,7 +292,7 @@ export default function MyFirstDungeon(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={schroedinger} alt="Playtest Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="Playtest Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Playtest Edition w/ Elliot Davis</h2> 
                             <h6 className="text-xs my-2">February 3rd, 2023</h6>
@@ -323,7 +323,7 @@ export default function MyFirstDungeon(){
                         game about hope, and how it can be found even in the darkest of moments.
                     </p>
                     <div className="card lg:card-side card-bordered my-4">                       
-                        <Image src={candles} alt="10 Candles Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="10 Candles Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Part 3 w/ Elliot Davis</h2> 
                             <h6 className="text-xs my-2">January 1st, 2023</h6>
@@ -338,7 +338,7 @@ export default function MyFirstDungeon(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered my-4">                       
-                        <Image src={candles} alt="10 Candles Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="10 Candles Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Part 2 - The Black Dahlia</h2> 
                             <h6 className="text-xs my-2">December 25th, 2022</h6>
@@ -353,7 +353,7 @@ export default function MyFirstDungeon(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered my-4">                       
-                        <Image src={candles} alt="10 Candles Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="10 Candles Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Part 1 w/ Stephen Dewey</h2> 
                             <h6 className="text-xs my-2">December 18th, 2022</h6>
@@ -484,7 +484,7 @@ export default function MyFirstDungeon(){
                         Something is Wrong with the Chickens is a one-page TTRPG all about chickens, eldritch powers, and revenge.
                     </p>
                     <div className="card lg:card-side card-bordered my-4">                       
-                        <Image src={chickens} alt="Something is Wrong With the Chickens Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="Something is Wrong With the Chickens Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Part 3: Talkback w/ Elliot Davis</h2> 
                             <h6 className="text-xs my-2">July 20th, 2022</h6>
@@ -499,7 +499,7 @@ export default function MyFirstDungeon(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered my-4">                       
-                        <Image src={chickens} alt="Something is Wrong With the Chickens Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="Something is Wrong With the Chickens Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Part 2 - The Poultry of Prophecy</h2> 
                             <h6 className="text-xs my-2">July 13th, 2022</h6>
@@ -516,7 +516,7 @@ export default function MyFirstDungeon(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered my-4">                       
-                        <Image src={chickens} alt="Something is Wrong With the Chickens Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={die} alt="Something is Wrong With the Chickens Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Part 1 w/ Elliot Davis</h2> 
                             <h6 className="text-xs my-2">July 6th, 2022</h6>
