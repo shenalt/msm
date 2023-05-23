@@ -1,5 +1,6 @@
 import {FaTwitter, FaYoutube, FaInstagram, FaSpotify, FaPatreon, FaDiscord, } from "react-icons/fa"
 import { SiApplepodcasts } from "react-icons/si"
+import Link from "next/link"
 
 export default function Footer(){
     return(
@@ -11,8 +12,8 @@ export default function Footer(){
                 <FaTwitter className="cursor-pointer hover:fill-twitterBlue transition-all duration-500" size={28} />
                 <FaYoutube className="cursor-pointer hover:fill-youtubeRed transition-all duration-500" size={28} />
                 <FaInstagram className="cursor-pointer hover:fill-instagramPurple transition-all duration-500" size={28} />
-                <FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} />
-                <SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} />
+                <Link href={'https://open.spotify.com/show/5BpUwGLHOKzuQ8ycOvIedn'} target="_blank"><FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} /></Link>
+                <Link href={'https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088'} target="_blank"><SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} /></Link>
             </div>
         </div>
     )

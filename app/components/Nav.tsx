@@ -62,8 +62,8 @@ export default function Nav(){
                 <div className="hidden lg:flex flex-row gap-8 ml-8">
                     <FaPatreon className="cursor-pointer hover:fill-patreonOrange transition-all duration-500" size={28} />
                     <FaDiscord className="cursor-pointer hover:fill-discordPurple transition-all duration-500" size={28} />
-                    <FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} />
-                    <SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} />
+                    <Link href={'https://open.spotify.com/show/5BpUwGLHOKzuQ8ycOvIedn'} target="_blank"><FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} /></Link>
+                    <Link href={'https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088'} target="_blank"><SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} /></Link>
                 </div>
             </div>
 
@@ -120,8 +120,8 @@ export default function Nav(){
                         <div className="flex gap-8 items-center justify-center mb-10">
                             <FaPatreon className="cursor-pointer hover:fill-patreonOrange transition-all duration-500" size={28} />
                             <FaDiscord className="cursor-pointer hover:fill-discordPurple transition-all duration-500" size={28} />
-                            <FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} />
-                            <SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} />
+                            <Link href={'https://open.spotify.com/show/5BpUwGLHOKzuQ8ycOvIedn'} target="_blank"><FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} /></Link>
+                            <Link href={'https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088'} target="_blank"><SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} /></Link>
                         </div>
                         <div className="dropdown dropdown-end cursor-pointer my-10">
                             <motion.div 
