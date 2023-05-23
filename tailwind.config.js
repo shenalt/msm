@@ -47,6 +47,8 @@ module.exports = {
       instagramPurple: '#833AB4',
       spotifyGreen: '#1DB954',
       applePurple: '#D56DFB',
+      discordPurple: '#7289da',
+      patreonOrange: '#f96854',
       msmRed: '#EC5151',
       msmRedAnalagYellow: '#ECEC51',
       msmRedAnalagGreen: '#9FEC51',

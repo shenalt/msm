@@ -19,7 +19,7 @@ export default function MyFirstDungeon(){
     return(
         <div className="z-10 w-full flex flex-col items-center">
             <Image src={myFirstDungeon} alt="My First Dungeon Logo" className="w-11/12 lg:w-3/6 h-4/5 m-auto mt-8" />
-            <p className="text-2xl m-auto text-center my-8">Listen to My First Dungeon here</p>
+            <p className="text-2xl m-auto text-center my-8">Listen to My First Dungeon here:</p>
             <div className="flex flex-row gap-20 items-center justify-center my-8">
                 <Link href={"https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088"} target="_blank">
                     <SiApplepodcasts className="cursor-pointer hover:fill-applePurple hover:scale-150 transition-all duration-500" size={70} />

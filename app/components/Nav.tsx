@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import logo from "../../public/Logo_Large.png"
-import {FaTwitter, FaYoutube, FaInstagram, FaSpotify,} from "react-icons/fa"
+import {FaTwitter, FaYoutube, FaInstagram, FaSpotify, FaPatreon, FaDiscord, } from "react-icons/fa"
 import { SiApplepodcasts } from "react-icons/si"
 import Link from "next/link"
 import { useState, } from "react"
@@ -37,28 +37,60 @@ export default function Nav(){
     return(
         // LOGO
         <nav className="flex-row flex items-center justify-between bg-bkgColor border-b">
-            <motion.div 
-                className="flex items-center gap-8 p-4 md:p-5 cursor-pointer"
-                whileHover={{
-                    scale: 1.25,
-                    transition: { duration: 0.5 },
-                }}
-                whileTap={{ 
-                    scale: 0.9, 
-                }}
-            >
-                <Link href={"/"}>
-                    <Image 
-                        src={logo} 
-                        alt="Logo for Multi Sided Media" 
-                        className="rounded-sm"  
-                        width={125}
-                        height={125}
-                    />
-                </Link>
-            </motion.div>
-        {/* HAMBURGER MENU */}
-            <div>   
+            <div className="flex items-center gap-8 p-4 md:p-5">
+                <motion.div
+                    whileHover={{
+                        scale: 1.25,
+                        transition: { duration: 0.5 },
+                    }}
+                    whileTap={{ 
+                        scale: 0.9, 
+                        transition: { duration: 0.5 },
+                    }}
+                >
+                    <Link href={"/"}>
+                        <Image 
+                            src={logo} 
+                            alt="Logo for Many Sided Media" 
+                            className="rounded-sm"  
+                            width={125}
+                            height={125}
+                        />
+                    </Link>
+                </motion.div>
+                {/* SOCIAL MEDIA ICONS FOR DESKTOP */}
+                <div className="hidden lg:flex flex-row gap-8 ml-8">
+                    <FaPatreon className="cursor-pointer hover:fill-patreonOrange transition-all duration-500" size={28} />
+                    <FaDiscord className="cursor-pointer hover:fill-discordPurple transition-all duration-500" size={28} />
+                    <FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} />
+                    <SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} />
+                </div>
+            </div>
+
+        {/* REGULAR NAV FOR DESKTOP */}
+            <div className="hidden lg:block">
+                <ul className="flex flex-row">
+                    <div className="dropdown mx-8 my-1">
+                        <div tabIndex={0} className="cursor-pointer hover:text-msmRed hover:scale-125 transition-all duration-100">
+                            <div className="flex flex-row">Our Shows <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="arrow-drop-down"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7 10l5 5 5-5H7z"></path></svg></div>
+                        </div> 
+                        <ul tabIndex={0} className="p-6 shadow menu dropdown-content bg-msmYellow rounded-box w-72 text-center">
+                            <Link href={'/twentysidedpodcast'}>
+                                <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 my-2">Twenty Sided Podcast</li>
+                            </Link>
+                            <Link href={'/myfirstdungeon'}>
+                                <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 my-2">My First Dungeon</li>
+                            </Link>
+                        </ul>
+                    </div>
+                    <Link href={'/aboutus'}><li className="mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">About Us</li></Link>
+                    <Link href={'/contactus'}><li className="mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Work With Us</li></Link>
+                </ul>
+            </div>
+        {/* REGULAR NAV FOR DESKTOP */}
+        
+        {/* HAMBURGER MENU for phones & tablets */}
+            <div className="block lg:hidden">   
                 {/* 3 LINES */}
                 <button 
                     className={`absolute top-[5%] right-8 flex flex-col justify-around w-8 h-8 border-none cursor-pointer p-0 z-20 transition-all focus:outline-none`}
@@ -82,15 +114,14 @@ export default function Nav(){
                     }}                    
                 >
                     <div
-                        className={`w-full ${isOpen ? "translate-x-0" : "translate-x-[100%]"} transition-all duration-300 lg:w-2/6 flex flex-col justify-center bg-navColor h-screen text-left p-8 absolute top-0 right-0`}
+                        className={`w-full ${isOpen ? "translate-x-0" : "translate-x-[100%]"} transition-all duration-300 lg:w-2/6 flex flex-col justify-center bg-msmBlue h-screen text-left p-8 absolute top-0 right-0`}
                         onClick={(e) => e.stopPropagation()}
                     >
                         <div className="flex gap-8 items-center justify-center mb-10">
-                            <FaTwitter className="cursor-pointer hover:fill-twitterBlue transition-all duration-500" />
-                            <FaYoutube className="cursor-pointer hover:fill-youtubeRed transition-all duration-500" />
-                            <FaInstagram className="cursor-pointer hover:fill-instagramPurple transition-all duration-500" />
-                            <FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" />
-                            <SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" />
+                            <FaPatreon className="cursor-pointer hover:fill-patreonOrange transition-all duration-500" size={28} />
+                            <FaDiscord className="cursor-pointer hover:fill-discordPurple transition-all duration-500" size={28} />
+                            <FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} />
+                            <SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} />
                         </div>
                         <div className="dropdown dropdown-end cursor-pointer my-10">
                             <motion.div 
@@ -148,7 +179,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmRed duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-10`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-10`}>
                                     ABOUT US
                                 </p>
                             </motion.div>
@@ -169,15 +200,14 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmBlue duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 lg:my-10`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 lg:my-10`}>
                                     WORK WITH US
                                 </p>
                             </motion.div>
                         </Link>                        
                     </div>
                 </div>
-                {/* MENU */}
-                
+                {/* MENU */}               
             </div>
         </nav>
     )
