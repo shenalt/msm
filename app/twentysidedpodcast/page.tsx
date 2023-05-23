@@ -3,15 +3,16 @@
 import Image from "next/image"
 import Link from "next/link"
 import titanfall from "../../public/twenty/escapeFromTitanfall.png"
-import prisoner from "../../public/twenty/prisonerStatic.PNG"
-import tspLogo from "../../public/twenty/tspLogo.PNG"
+import tempPic from "../../public/Logo_Large_BW.png"
+// import prisoner from "../../public/twenty/prisonerStatic.PNG"
+// import tspLogo from "../../public/twenty/tspLogo.PNG"
 import {FaSpotify,} from "react-icons/fa"
 import { SiApplepodcasts } from "react-icons/si"
 
 export default function TwentySidedPodcast(){
     return(
         <div className="z-10 w-full flex flex-col items-center">
-            <Image src={tspLogo} alt="Twenty Sided Podcast Logo" className="w-11/12 lg:w-2/5 m-auto mt-8" />
+            <Image src={tempPic} alt="Twenty Sided Podcast Logo" className="w-11/12 lg:w-2/5 m-auto mt-8" />
             <p className="text-2xl m-auto text-center my-8">Listen to Twenty Sided Podcast here</p>
             <div className="flex flex-row gap-20 items-center justify-center my-8">
                 <Link href={"https://podcasts.apple.com/us/podcast/twenty-sided-podcast/id1578469041"} target="_blank">
@@ -211,7 +212,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 1: Descent into Madness</h2> 
                             <h6 className="text-xs my-2">November 22nd, 2021</h6>
@@ -224,7 +225,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 2: What Is And What Never Should Be</h2> 
                             <h6 className="text-xs my-2">November 29th, 2021</h6>
@@ -237,7 +238,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 3: Monster Zero</h2> 
                             <h6 className="text-xs my-2">December 6th, 2021</h6>
@@ -250,7 +251,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 4: Assume Form</h2> 
                             <h6 className="text-xs my-2">December 13th, 2021</h6>
@@ -263,7 +264,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 5: Kids See Ghosts</h2> 
                             <h6 className="text-xs my-2">December 20th, 2021</h6>
@@ -276,7 +277,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 6 - Lonely Void</h2> 
                             <h6 className="text-xs my-2">January 3rd, 2022</h6>
@@ -289,7 +290,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 7 - The Sound of Silence</h2> 
                             <h6 className="text-xs my-2">January 10th, 2022</h6>
@@ -302,7 +303,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 8 - Don't Panic</h2> 
                             <h6 className="text-xs my-2">January 17th, 2022</h6>
@@ -315,7 +316,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 9 - I Want To Break Free</h2> 
                             <h6 className="text-xs my-2">January 24th, 2022</h6>
@@ -328,7 +329,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 10 - Lost & Found</h2> 
                             <h6 className="text-xs my-2">January 31st, 2022</h6>
@@ -341,7 +342,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 11 - Wild World</h2> 
                             <h6 className="text-xs my-2">February 7th, 2022</h6>
@@ -354,7 +355,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 12 - Gotta Knock a Little Harder</h2> 
                             <h6 className="text-xs my-2">February 14th, 2022</h6>
@@ -367,7 +368,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 13 - Them Changes</h2> 
                             <h6 className="text-xs my-2">February 21st, 2022</h6>
@@ -380,7 +381,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 14 - Us and Them</h2> 
                             <h6 className="text-xs my-2">March 7th, 2022</h6>
@@ -393,7 +394,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 15: Deception</h2> 
                             <h6 className="text-xs my-2">March 21st, 2022</h6>
@@ -406,7 +407,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 16: Is It In My Head?</h2> 
                             <h6 className="text-xs my-2">April 4th, 2022</h6>
@@ -419,7 +420,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 17: Roundabout</h2> 
                             <h6 className="text-xs my-2">April 18th, 2022</h6>
@@ -432,7 +433,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered border-neutral-900 my-4">                       
-                        <Image src={prisoner} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
+                        <Image src={titanfall} alt="Prisoners of the Static Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
                             <h2 className="card-title text-3xl my-2">Ep. 18 - That Funny Feeling</h2> 
                             <h6 className="text-xs my-2">July 27th, 2022</h6>
