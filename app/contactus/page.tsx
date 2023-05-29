@@ -10,6 +10,7 @@ export default function ContactUs(){
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
+    const [subject, setSubject] = useState('');
 
     const showToastMessage = (isSuccess: boolean) => {
         if(isSuccess){
@@ -54,7 +55,7 @@ export default function ContactUs(){
                             placeholder="Name" 
                             name='name'
                             id='name'
-                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmRed text-neutral-50 placeholder:text-neutral-700" 
+                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 placeholder:text-neutral-50 ${name === '' ? 'bg-neutral-900 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`}
                             required 
                             onChange={e => setName(e.currentTarget.value)}
                         />
@@ -68,7 +69,7 @@ export default function ContactUs(){
                             placeholder="Email" 
                             name='email'
                             id='email'
-                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmBlue text-neutral-900 placeholder:text-neutral-500"
+                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 placeholder:text-neutral-50 ${email === '' ? 'bg-neutral-900 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`}
                             required 
                             onChange={e => setEmail(e.currentTarget.value)}
                         />
@@ -76,7 +77,7 @@ export default function ContactUs(){
                     <div className='form-control items-center justify-center my-4'>
                         <label className="label" htmlFor='whoSending'>Who are you?</label>
                         <select 
-                            className="select select-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmRed text-neutral-50" 
+                            className="select select-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmBlue text-neutral-900" 
                             name='whoSending' 
                             id='whoSending'
                         >
@@ -95,8 +96,9 @@ export default function ContactUs(){
                             placeholder="Subject" 
                             name='subject'
                             id='subject'
-                            className="input input-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmBlue text-neutral-900 placeholder:text-neutral-500" 
+                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 placeholder:text-neutral-50 ${subject === '' ? 'bg-neutral-900 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`} 
                             required 
+                            onChange={e => setSubject(e.currentTarget.value)}
                         />
                     </div>
                     <div className="form-control items-center justify-center my-4">
@@ -104,7 +106,7 @@ export default function ContactUs(){
                             <span className="label-text">Message</span>
                         </label> 
                         <textarea 
-                            className="textarea w-full sm:w-3/4 lg:w-3/5 h-80 textarea-bordered bg-msmRed text-neutral-50 placeholder:text-neutral-700" 
+                            className={`textarea w-full sm:w-3/4 lg:w-3/5 h-80 textarea-bordered text-neutral-900 placeholder:text-neutral-50 ${message === '' ? 'bg-neutral-900 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`} 
                             placeholder="Message" 
                             name='message'
                             id='message'
@@ -116,7 +118,7 @@ export default function ContactUs(){
                     <div className='form-control items-center justify-center'>
                         <button 
                             type='submit' 
-                            className={`btn ${name === '' || email === '' || message === '' ? 'btn-disabled' : 'text-neutral-900'} my-4 bg-msmYellowTetraGreen hover:bg-msmYellowTetraGreen hover:scale-125 transition-all duration-500`}
+                            className={`btn ${name === '' || email === '' || message === '' ? 'btn-disabled' : 'text-neutral-50'} my-4 bg-msmRed hover:bg-msmRed hover:scale-125 transition-all duration-500`}
                         >
                             Submit
                         </button>

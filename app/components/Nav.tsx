@@ -75,11 +75,11 @@ export default function Nav(){
                             <div className="flex flex-row">Our Shows <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="arrow-drop-down"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7 10l5 5 5-5H7z"></path></svg></div>
                         </div> 
                         <ul tabIndex={0} className="p-6 shadow menu dropdown-content bg-msmYellow rounded-box w-72 text-center">
-                            <Link href={'/twentysidedpodcast'}>
-                                <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 my-2">Twenty Sided Podcast</li>
-                            </Link>
                             <Link href={'/myfirstdungeon'}>
                                 <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 my-2">My First Dungeon</li>
+                            </Link>
+                            <Link href={'/twentysidedpodcast'}>
+                                <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 my-2">Twenty Sided Podcast</li>
                             </Link>
                         </ul>
                     </div>
@@ -144,15 +144,6 @@ export default function Nav(){
                             </motion.div>
                             <ul tabIndex={0} className="dropdown-content menu p-4 space-y-4 shadow rounded-box w-full text-center bg-msmYellow">
                                 <Link
-                                    href={'/twentysidedpodcast'}
-                                    onClick={() => {
-                                        setIsOpen(!isOpen);
-                                        setScroll(isOpen);
-                                    }}
-                                >
-                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500">Twenty Sided Podcast</li>
-                                </Link>
-                                <Link 
                                     href={'/myfirstdungeon'}
                                     onClick={() => {
                                         setIsOpen(!isOpen);
@@ -160,6 +151,15 @@ export default function Nav(){
                                     }}
                                 >
                                     <li className="hover:text-msmRed hover:scale-125 transition-all duration-500">My First Dungeon</li>
+                                </Link>
+                                <Link 
+                                    href={'/twentysidedpodcast'}
+                                    onClick={() => {
+                                        setIsOpen(!isOpen);
+                                        setScroll(isOpen);
+                                    }}
+                                >
+                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500">Twenty Sided Podcast</li>
                                 </Link>
                             </ul>
                         </div>
