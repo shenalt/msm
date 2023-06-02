@@ -1,5 +1,3 @@
-'use client'
-
 import Image from "next/image"
 import Link from "next/link"
 import myFirstDungeon from "../../public/myFirstDungeon/firstDungeon.jpg"
@@ -14,8 +12,55 @@ import wanderHome from "../../public/myFirstDungeon/Wanderhome.png"
 import honey from "../../public/myFirstDungeon/honeyHeist.png"
 import {FaSpotify,} from "react-icons/fa"
 import { SiApplepodcasts } from "react-icons/si"
+import { ReactNode } from "react"
 
-export default function MyFirstDungeon(){
+//import type { GetStaticProps, InferGetStaticPropsType } from "next"
+
+type Cast = {
+    //[x: string]: ReactNode
+    castId: string;
+    name: string;
+    headshot: string;
+    podcast: string;
+    showId: string;
+    //shows: Show;
+}
+
+type Show = {
+    showId: string; 
+    title: string;
+    description: string;
+    picture: string;
+    spotifyLink: string;
+    podcast: string;
+    color: string;
+    castMembers: Cast[]
+}
+
+async function getShows(){
+    // Update the BASE_URL in env.local to the deployed url
+    const res = await fetch(`${process.env.BASE_URL}/api/getShows`, {cache: "no-cache"})
+    //const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
+    if(!res.ok){
+        console.log(res)
+    }
+    return res.json()
+}
+
+export default async function MyFirstDungeon(){
+    const data: {
+        showId: string; 
+        title: string; 
+        description: string; 
+        picture: string; 
+        spotifyLink: string; 
+        podcast: string;
+        color: string;
+        castMembers: Cast[];
+    }[] = await getShows()
+    console.log("The data")
+    console.log(data)
+
     return(
         <div className="z-10 w-full flex flex-col items-center">
             <Image src={myFirstDungeon} alt="My First Dungeon Logo" className="w-11/12 lg:w-3/6 h-4/5 m-auto mt-8" />
@@ -35,6 +80,42 @@ export default function MyFirstDungeon(){
                 </p>
                 <p className="m-auto mb-8">[INSERT ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
             </div>
+
+            {data.map((show) => (
+                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-[${show.color}] text-neutral-50`}>
+                    <input type="checkbox" />
+                    <div className="collapse-title text-xl font-medium border-b">
+                        {show.title}
+                    </div>
+                    <div className="collapse-content">
+                        <p className="m-auto mt-8">
+                            {show.description}
+                        </p>
+                        <div className="flex flex-col md:flex-row items-center justify-around my-8">
+                            <div>
+                                <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CAST</h1>
+                                {show.castMembers.map((item) => (
+                                    <h2 className="text-sm my-2">{item.name}</h2>
+                                ))}
+                            </div>
+                            <div>
+                                <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CREW</h1>
+                            </div>
+                        </div>
+                        <div className="card lg:card-side card-bordered my-4">
+                            {/* <Image src={die} alt="Die Logo" className="w-full lg:w-1/5 rounded-2xl" /> */}
+                            <div className="card-body">
+                            <iframe src={`${show.spotifyLink}`} width="100%" height="352" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                {/* <div className="card-actions">
+                                    <Link href={"https://podcasts.apple.com/us/podcast/die-episode-5-the-master/id1601290088?i=1000612755243"} target="_blank">
+                                        <button className="btn btn-primary">More Info</button>
+                                    </Link> 
+                                </div> */}
+                            </div>
+                        </div>
+                    </div>                     
+                </div>
+            ))}
 
             {/* DIE */}
             <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
@@ -597,3 +678,12 @@ export default function MyFirstDungeon(){
         </div>
     )
 }
+
+// export const getStaticProps = async () => {
+//     const showInfo = await prisma.show.findMany()
+//     console.log("HSDKFDJSF")
+//     console.log(showInfo)
+//     return {
+//         props: { showInfo },
+//     }
+// }

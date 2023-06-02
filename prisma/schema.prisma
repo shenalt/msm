@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Show {
+  showId      String @id @unique @default(cuid())
+  title       String
+  description String
+  picture     String
+  spotifyLink String
+  podcast     String
+  color       String @default("FFFFFF")
+  castMembers Cast[]
+}
+
+model Cast {
+  castId   String @unique @default(cuid())
+  name     String
+  headshot String
+  podcast  String
+  showId   String
+  shows    Show   @relation(fields: [showId], references: [showId])
+}
