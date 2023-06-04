@@ -1,20 +1,21 @@
 import Image from "next/image"
 import Link from "next/link"
 import myFirstDungeon from "../../public/myFirstDungeon/firstDungeon.jpg"
-import myFirstDungeonCardImg from "../../public/myFirstDungeon/myFirstDungeonTwo.png"
-// import candles from "../../public/myFirstDungeon/tenCandles.JPEG"
+//import myFirstDungeonCardImg from "../../public/myFirstDungeon/myFirstDungeonTwo.png"
+import tencandles from "../../public/myFirstDungeon/Anamnesis.png"
 // import schroedinger from "../../public/myFirstDungeon/playtest.JPEG"
 import defendLair from "../../public/myFirstDungeon/defendYourLair.jpg"
-import die from "../../public/myFirstDungeon/die.png"
-import anamnesis from "../../public/myFirstDungeon/Anamnesis.png"
+// import die from "../../public/myFirstDungeon/die.png"
+// import anamnesis from "../../public/myFirstDungeon/Anamnesis.png"
 import wanderHome from "../../public/myFirstDungeon/Wanderhome.png"
+
 // import chickens from "../../public/myFirstDungeon/chickens.PNG"
 import honey from "../../public/myFirstDungeon/honeyHeist.png"
 import {FaSpotify,} from "react-icons/fa"
 import { SiApplepodcasts } from "react-icons/si"
-import { ReactNode } from "react"
 
-//import type { GetStaticProps, InferGetStaticPropsType } from "next"
+// public\myFirstDungeon\Anamnesis.png
+// C:\Users\tisse\Desktop\portfolio\msm\public\myFirstDungeon\Anamnesis.png
 
 type Cast = {
     //[x: string]: ReactNode
@@ -39,6 +40,8 @@ type Show = {
 
 async function getShows(){
     // Update the BASE_URL in env.local to the deployed url
+    // BASE_URL=http://localhost:3000
+    // 
     const res = await fetch(`${process.env.BASE_URL}/api/getShows`, {cache: "no-cache"})
     //const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
     if(!res.ok){
@@ -82,15 +85,16 @@ export default async function MyFirstDungeon(){
             </div>
 
             {data.map((show) => (
-                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-[${show.color}] text-neutral-50`}>
+                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-instagramPurple text-neutral-50`} key={show.title}>
                     <input type="checkbox" />
                     <div className="collapse-title text-xl font-medium border-b">
                         {show.title}
                     </div>
                     <div className="collapse-content">
-                        <p className="m-auto mt-8">
-                            {show.description}
-                        </p>
+                        <div className="flex flex-col md:flex-row items-center justify-around my-8">
+                            <Image src={show.picture} alt={`${show.title} Logo`} width={30} height={30} className="w-full lg:w-1/5 rounded-2xl" />
+                            <p className="m-auto mt-8">{show.description}</p>
+                        </div>
                         <div className="flex flex-col md:flex-row items-center justify-around my-8">
                             <div>
                                 <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CAST</h1>
@@ -103,7 +107,6 @@ export default async function MyFirstDungeon(){
                             </div>
                         </div>
                         <div className="card lg:card-side card-bordered my-4">
-                            {/* <Image src={die} alt="Die Logo" className="w-full lg:w-1/5 rounded-2xl" /> */}
                             <div className="card-body">
                             <iframe src={`${show.spotifyLink}`} width="100%" height="352" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                                 {/* <div className="card-actions">
@@ -118,7 +121,7 @@ export default async function MyFirstDungeon(){
             ))}
 
             {/* DIE */}
-            <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
+            {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     DIE
@@ -147,8 +150,6 @@ export default async function MyFirstDungeon(){
                             <h2 className="text-xs my-2">Artwork by Stephanie Hans</h2>
                         </div>
                     </div>
-                    {/* <iframe src="https://open.spotify.com/embed/show/5BpUwGLHOKzuQ8ycOvIedn?utm_source=generator" width="100%" height="352" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    <iframe src="https://open.spotify.com/embed/playlist/2WJtU4KaWDMWBDTGCSSE18?utm_source=generator" width="100%" height="352" frameBorder="0" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe> */}
                     <div className="card lg:card-side card-bordered my-4">                       
                         <Image src={die} alt="Die Logo" className="w-full lg:w-1/5 rounded-2xl" />                        
                         <div className="card-body">
@@ -244,11 +245,11 @@ export default async function MyFirstDungeon(){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* DIE */}
 
             {/* ANAMNESIS */}
-            <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmBlue">
+            {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmBlue">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     ANAMNESIS
@@ -314,11 +315,11 @@ export default async function MyFirstDungeon(){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* ANAMNESIS */}
 
             {/* SCHROEDINGER'S CAT */}
-            <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmYellow">
+            {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmYellow">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     SCHROEDINGER'S CATS
@@ -389,11 +390,11 @@ export default async function MyFirstDungeon(){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* SCHROEDINGER'S CAT */}
 
             {/* 10 CANDLES */}
-            <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
+            {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     10 CANDLES
@@ -450,11 +451,11 @@ export default async function MyFirstDungeon(){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* 10 CANDLES */}
 
             {/* HOW TO DEFEND YOUR LAIR */}
-            <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmBlue">
+            {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmBlue">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     HOW TO DEFEND YOUR LAIR
@@ -476,11 +477,11 @@ export default async function MyFirstDungeon(){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* HOW TO DEFEND YOUR LAIR */}
 
             {/* WANDERHOME */}
-            <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmYellow">
+            {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmYellow">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     WANDERHOME
@@ -547,11 +548,11 @@ export default async function MyFirstDungeon(){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* WANDERHOME */}
 
             {/* SOMETHING IS WRONG WITH THE CHICKENS */}
-            <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow text-neutral-50 bg-msmRed">
+            {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow text-neutral-50 bg-msmRed">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     SOMETHING IS WRONG WITH THE CHICKENS
@@ -613,11 +614,11 @@ export default async function MyFirstDungeon(){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* SOMETHING IS WRONG WITH THE CHICKENS */}
 
             {/* HONEY HEIST */}
-            <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmBlue mb-8">
+            {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmBlue mb-8">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     HONEY HEIST
@@ -672,18 +673,9 @@ export default async function MyFirstDungeon(){
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
             {/* HONEY HEIST */}
 
         </div>
     )
 }
-
-// export const getStaticProps = async () => {
-//     const showInfo = await prisma.show.findMany()
-//     console.log("HSDKFDJSF")
-//     console.log(showInfo)
-//     return {
-//         props: { showInfo },
-//     }
-// }
