@@ -42,7 +42,7 @@ async function getShows(){
     // Update the BASE_URL in env.local to the deployed url
     // BASE_URL=http://localhost:3000
     // 
-    const res = await fetch(`${process.env.BASE_URL}/api/getShows`, {cache: "no-cache"})
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getShows`, {cache: "no-cache"})
     //const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
     if(!res.ok){
         console.log(res)
