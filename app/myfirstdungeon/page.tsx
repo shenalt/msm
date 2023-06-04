@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import Link from "next/link"
 import myFirstDungeon from "../../public/myFirstDungeon/firstDungeon.jpg"
@@ -42,7 +44,8 @@ async function getShows(){
     // Update the BASE_URL in env.local to the deployed url
     // BASE_URL=http://localhost:3000
     // 
-    const res = await fetch(`https://msm-seven.vercel.app/api/getShows`, {cache: "no-cache"})
+    //const res = await fetch(`https://msm-seven.vercel.app/api/getShows`, {cache: "no-cache"})
+    const res = await fetch(`${process.env.BASE_URL}/api/getShows`, {cache: "no-cache"})
     //const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
     if(!res.ok){
         console.log(res)
@@ -92,7 +95,7 @@ export default async function MyFirstDungeon(){
                     </div>
                     <div className="collapse-content">
                         <div className="flex flex-col md:flex-row items-center justify-around my-8">
-                            <Image src={show.picture} alt={`${show.title} Logo`} width={30} height={30} className="w-full lg:w-1/5 rounded-2xl" />
+                            {/* <Image src={show.picture} alt={`${show.title} Logo`} width={30} height={30} className="w-full lg:w-1/5 rounded-2xl" /> */}
                             <p className="m-auto mt-8">{show.description}</p>
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-around my-8">
