@@ -1,6 +1,12 @@
 import './globals.css'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import { Roboto } from 'next/font/google'
+
+const roboto = Roboto({
+  weight: '700',
+  subsets: ['latin'],
+})
 
 export const metadata = {
   title: 'Many Sided Media Company',
@@ -14,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-rnf w-full m-auto bg-bkgColor">
+      <body className={`${roboto.className} w-full m-auto bg-bkgColor`}>
         <Nav />
         {children}
         <Footer />

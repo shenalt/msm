@@ -11,6 +11,7 @@ export default function ContactUs(){
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [subject, setSubject] = useState('');
+    const [sender, setSender] = useState('options');
 
     const showToastMessage = (isSuccess: boolean) => {
         if(isSuccess){
@@ -26,9 +27,9 @@ export default function ContactUs(){
 
     const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
         emailjs.sendForm(process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, e.currentTarget, process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
-          .then((result) => {
+          .then((result) => 
+          {
             showToastMessage(true)
           }, (error) => {
             showToastMessage(false)
@@ -77,10 +78,12 @@ export default function ContactUs(){
                     <div className='form-control items-center justify-center my-4'>
                         <label className="label" htmlFor='whoSending'>Who are you?</label>
                         <select 
-                            className="select select-bordered w-full sm:w-3/4 lg:w-3/5 bg-msmBlue text-neutral-900" 
+                            className={`select select-bordered w-full sm:w-3/4 lg:w-3/5 ${sender === 'options' ? 'bg-neutral-900 bg-opacity-50 text-neutral-50' : 'bg-msmBlue text-neutral-900'} transition-all duration-500`} 
                             name='whoSending' 
                             id='whoSending'
+                            onChange={e => setSender(e.currentTarget.value)}
                         >
+                            <option value="options">Select an option</option>
                             <option value="fan">Fan</option>
                             <option value="player">Prospective Player</option> 
                             <option value="press">Press Outlet</option> 
@@ -118,7 +121,7 @@ export default function ContactUs(){
                     <div className='form-control items-center justify-center'>
                         <button 
                             type='submit' 
-                            className={`btn ${name === '' || email === '' || message === '' ? 'btn-disabled' : 'text-neutral-50'} my-4 bg-msmRed hover:bg-msmRed hover:scale-125 transition-all duration-500`}
+                            className={`btn ${name === '' || email === '' || message === '' || sender === 'options' ? 'btn-disabled' : 'text-neutral-50'} my-4 bg-msmRed hover:bg-msmRed hover:scale-125 transition-all duration-500`}
                         >
                             Submit
                         </button>

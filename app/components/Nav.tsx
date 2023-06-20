@@ -36,7 +36,7 @@ export default function Nav(){
 
     return(
         // LOGO
-        <nav className="flex-row flex items-center justify-between bg-bkgColor border-b">
+        <nav className="font-rnf flex-row flex items-center justify-between bg-bkgColor border-b">
             <div className="flex items-center gap-8 p-4 md:p-5">
                 <motion.div
                     whileHover={{
@@ -61,7 +61,7 @@ export default function Nav(){
                 {/* SOCIAL MEDIA ICONS FOR DESKTOP */}
                 <div className="hidden lg:flex flex-row gap-8 ml-8">
                     <FaPatreon className="cursor-pointer hover:fill-patreonOrange transition-all duration-500" size={28} />
-                    <FaDiscord className="cursor-pointer hover:fill-discordPurple transition-all duration-500" size={28} />
+                    <Link href={'https://discord.gg/KevdEDMQNa'} target="_blank"><FaDiscord className="cursor-pointer hover:fill-discordPurple transition-all duration-500" size={28} /></Link>
                     <Link href={'https://open.spotify.com/show/5BpUwGLHOKzuQ8ycOvIedn'} target="_blank"><FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} /></Link>
                     <Link href={'https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088'} target="_blank"><SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} /></Link>
                 </div>

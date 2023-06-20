@@ -1,127 +1,83 @@
 'use client'
-
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
+import React, {useState, useEffect} from 'react'
+import { CldImage } from "next-cloudinary"
 import Link from "next/link"
-import myFirstDungeon from "../../public/myFirstDungeon/firstDungeon.jpg"
+import myFirstDungeon from "../../public/myFirstDungeon/firstDungeonCopy.jpg"
 //import myFirstDungeonCardImg from "../../public/myFirstDungeon/myFirstDungeonTwo.png"
-import tencandles from "../../public/myFirstDungeon/Anamnesis.png"
+//import tencandles from "../../public/myFirstDungeon/Anamnesis.png"
 // import schroedinger from "../../public/myFirstDungeon/playtest.JPEG"
-import defendLair from "../../public/myFirstDungeon/defendYourLair.jpg"
+// import defendLair from "../../public/myFirstDungeon/defendYourLair.jpg"
 // import die from "../../public/myFirstDungeon/die.png"
 // import anamnesis from "../../public/myFirstDungeon/Anamnesis.png"
-import wanderHome from "../../public/myFirstDungeon/Wanderhome.png"
+// import wanderHome from "../../public/myFirstDungeon/Wanderhome.png"
 
 // import chickens from "../../public/myFirstDungeon/chickens.PNG"
-import honey from "../../public/myFirstDungeon/honeyHeist.png"
-import {FaSpotify,} from "react-icons/fa"
-import { SiApplepodcasts } from "react-icons/si"
-
-// public\myFirstDungeon\Anamnesis.png
-// C:\Users\tisse\Desktop\portfolio\msm\public\myFirstDungeon\Anamnesis.png
-
-type Cast = {
-    //[x: string]: ReactNode
-    castId: string;
-    name: string;
-    headshot: string;
-    podcast: string;
-    showId: string;
-    //shows: Show;
-}
-
-type Show = {
-    showId: string; 
-    title: string;
-    description: string;
-    picture: string;
-    spotifyLink: string;
-    podcast: string;
-    color: string;
-    castMembers: Cast[]
-}
+// import honey from "../../public/myFirstDungeon/honeyHeist.png"
+import {FaSpotify, FaAmazon, } from "react-icons/fa"
+import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic } from "react-icons/si"
+import { Cast } from "../types/CastType"
 
 async function getShows(){
     // Update the BASE_URL in env.local to the deployed url
     // BASE_URL=http://localhost:3000
     // 
-    const res = await fetch(`https://msm-seven.vercel.app/api/getShows`, {cache: "no-cache"})
-    //const res = await fetch(`${process.env.BASE_URL}/api/getShows`, {cache: "no-cache"})
+    //const res = await fetch(`https://msm-seven.vercel.app/api/getShows`, {cache: "no-cache"})
+    //const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getShows`, {cache: "no-cache"})
     //const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
-    if(!res.ok){
-        console.log(res)
-    }
-    return res.json()
+    //if(!res.ok){
+    //    console.log(res)
+    //}
+    //return res.json()
 }
 
 export default async function MyFirstDungeon(){
-    const data: {
-        showId: string; 
-        title: string; 
-        description: string; 
-        picture: string; 
-        spotifyLink: string; 
-        podcast: string;
-        color: string;
-        castMembers: Cast[];
-    }[] = await getShows()
-    console.log("The data")
-    console.log(data)
+
+    // const data: {
+    //     showId: string; 
+    //     title: string; 
+    //     description: string; 
+    //     picture: string; 
+    //     spotifyLink: string; 
+    //     podcast: string;
+    //     color: string;
+    //     castMembers: Cast[];
+    // }[] = await getShows()
 
     return(
         <div className="z-10 w-full flex flex-col items-center">
             <Image src={myFirstDungeon} alt="My First Dungeon Logo" className="w-11/12 lg:w-3/6 h-4/5 m-auto mt-8" />
             <p className="text-2xl m-auto text-center my-8">Listen to My First Dungeon here:</p>
-            <div className="flex flex-row gap-20 items-center justify-center my-8">
+            <div className="flex flex-row flex-wrap gap-20 items-center justify-center my-8">
                 <Link href={"https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088"} target="_blank">
                     <SiApplepodcasts className="cursor-pointer hover:fill-applePurple hover:scale-150 transition-all duration-500" size={70} />
                 </Link>
                 <Link href={"https://open.spotify.com/show/5BpUwGLHOKzuQ8ycOvIedn"} target="_blank">
                     <FaSpotify className="cursor-pointer hover:fill-spotifyGreen hover:scale-150 transition-all duration-500" size={70} />
                 </Link>
+                <Link href={"https://music.amazon.com/podcasts/1e6e32ed-00ba-45c8-bab4-a79afc00a2cc/my-first-dungeon"} target="_blank">
+                    <FaAmazon className="cursor-pointer hover:fill-amazonOrange hover:scale-150 transition-all duration-500" size={70} />
+                </Link>
+                <Link href={"https://castbox.fm/channel/id4717958?country=us"} target="_blank">
+                    <SiCastbox className="cursor-pointer hover:fill-castboxOrange hover:scale-150 transition-all duration-500" size={70} />
+                </Link>
+                <Link href={"https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy83OWNhN2U4OC9wb2RjYXN0L3Jzcw"} target="_blank">
+                    <SiGooglepodcasts className="cursor-pointer hover:fill-googleBlue hover:scale-150 transition-all duration-500" size={70} />
+                </Link>
+                <Link href={"https://pca.st/m5ccnk2i"} target="_blank">
+                    <SiPocketcasts className="cursor-pointer hover:fill-pocketCastRed hover:scale-150 transition-all duration-500" size={70} />
+                </Link>
+                <Link href={"https://radiopublic.com/my-first-dungeon-GZvaRE"} target="_blank">
+                    <SiRadiopublic className="cursor-pointer hover:fill-radioPublicRed hover:scale-150 transition-all duration-500" size={70} />
+                </Link>
             </div>
             <div className="w-full md:w-4/6">
                 <p className="m-auto mx-4 my-4">
                     My First Dungeon is the tabletop role-playing podcast where we help players learn new games and make each one better than the last. Each season we choose a new game and a different 
-                    GM to run it. Then we circle back around to discuss what went right, what went wrong, and how we can make our next game ever better.
+                    GM to run it. Then we circle back around to discuss what went right, what went wrong, and how we can make our next game even better.
                 </p>
                 <p className="m-auto mb-8">[INSERT ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
-            </div>
-
-            {data.map((show) => (
-                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-instagramPurple text-neutral-50`} key={show.title}>
-                    <input type="checkbox" />
-                    <div className="collapse-title text-xl font-medium border-b">
-                        {show.title}
-                    </div>
-                    <div className="collapse-content">
-                        <div className="flex flex-col md:flex-row items-center justify-around my-8">
-                            {/* <Image src={show.picture} alt={`${show.title} Logo`} width={30} height={30} className="w-full lg:w-1/5 rounded-2xl" /> */}
-                            <p className="m-auto mt-8">{show.description}</p>
-                        </div>
-                        <div className="flex flex-col md:flex-row items-center justify-around my-8">
-                            <div>
-                                <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CAST</h1>
-                                {show.castMembers.map((item) => (
-                                    <h2 className="text-sm my-2">{item.name}</h2>
-                                ))}
-                            </div>
-                            <div>
-                                <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CREW</h1>
-                            </div>
-                        </div>
-                        <div className="card lg:card-side card-bordered my-4">
-                            <div className="card-body">
-                            <iframe src={`${show.spotifyLink}`} width="100%" height="352" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                                {/* <div className="card-actions">
-                                    <Link href={"https://podcasts.apple.com/us/podcast/die-episode-5-the-master/id1601290088?i=1000612755243"} target="_blank">
-                                        <button className="btn btn-primary">More Info</button>
-                                    </Link> 
-                                </div> */}
-                            </div>
-                        </div>
-                    </div>                     
-                </div>
-            ))}
+            </div>         
 
             {/* DIE */}
             {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
