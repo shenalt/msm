@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { CldImage } from "next-cloudinary"
+import { CldImage, } from "next-cloudinary"
 import frontPageLogo from '../public/SquareLogo.png'
 
 export default function Home() {
