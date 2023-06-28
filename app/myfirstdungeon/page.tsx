@@ -1,19 +1,10 @@
-'use client'
-import Image, { StaticImageData } from "next/image"
-import React, {useState, useEffect} from 'react'
+
+import Image from "next/image"
+import React from 'react'
 import { CldImage } from "next-cloudinary"
 import Link from "next/link"
 import myFirstDungeon from "../../public/myFirstDungeon/firstDungeonCopy.jpg"
-//import myFirstDungeonCardImg from "../../public/myFirstDungeon/myFirstDungeonTwo.png"
-//import tencandles from "../../public/myFirstDungeon/Anamnesis.png"
-// import schroedinger from "../../public/myFirstDungeon/playtest.JPEG"
-// import defendLair from "../../public/myFirstDungeon/defendYourLair.jpg"
-// import die from "../../public/myFirstDungeon/die.png"
-// import anamnesis from "../../public/myFirstDungeon/Anamnesis.png"
-// import wanderHome from "../../public/myFirstDungeon/Wanderhome.png"
-
-// import chickens from "../../public/myFirstDungeon/chickens.PNG"
-// import honey from "../../public/myFirstDungeon/honeyHeist.png"
+import { PrismaClient } from "@prisma/client"
 import {FaSpotify, FaAmazon, } from "react-icons/fa"
 import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic } from "react-icons/si"
 import { Cast } from "../types/CastType"
@@ -31,6 +22,17 @@ async function getShows(){
     return res.json()
 }
 
+const fetchShows = async () => {
+    const prisma = new PrismaClient()
+    // Get shows
+    const theShows = await prisma.show.findMany({
+        include: {
+            castMembers: true,
+        },
+    })
+    return theShows 
+}
+
 export default async function MyFirstDungeon(){
 
     const data: {
@@ -42,7 +44,7 @@ export default async function MyFirstDungeon(){
         podcast: string;
         color: string;
         castMembers: Cast[];
-    }[] = await getShows()
+    }[] = await fetchShows()
 
     return(
         <div className="z-10 w-full flex flex-col items-center">
@@ -87,8 +89,8 @@ export default async function MyFirstDungeon(){
                     </div>
                     <div className="collapse-content">
                         <div className="flex flex-col md:flex-row items-center justify-around my-8">
-                            {/* <Image src={show.picture} alt={`${show.title} Logo`} width={30} height={30} className="w-full lg:w-1/5 rounded-2xl" /> */}
-                            <CldImage width="250" height="250" src={`samples/msm/${show.picture}`} alt="test" className="w-full lg:w-1/3 rounded-2xl" />
+                            <Image src={'https://res.cloudinary.com/djr5bxwfk/image/upload/v1686269337/samples/msm/AnamnesisCoverImage.png'} alt='test' className="w-7/12 lg:w-5/12 h-auto m-auto" width={300} height={300} />
+                            {/* <CldImage width="250" height="250" src={`samples/msm/${show.picture}`} alt="test" className="w-full lg:w-1/3 rounded-2xl" /> */}
                             <p className="m-4">{show.description}</p>
                         </div>
                         <div className="flex flex-col md:flex-row items-center justify-around my-8">

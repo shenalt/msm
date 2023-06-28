@@ -15,61 +15,11 @@ export default function Home() {
       <p className='my-8'>
         [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
       </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
-      <p className='my-8'>
-        [INSERT TEXT HERE ABOUT MANY SIDED MEDIA EXPLAINING WHAT IT IS AND WHAT YOU PROVIDE AND ANYTHING ELSE YOU THINK WOULD BELONG HERE]
-      </p>
 
       <div className="carousel w-full m-4">
       <div id="slide1" className="carousel-item relative w-full">
-        <CldImage width="375" height="375" src={`https://res.cloudinary.com/djr5bxwfk/image/upload/v1686269337/samples/msm/AnamnesisCoverImage.png`} alt="test" className="w-7/12 lg:w-5/12 h-auto m-auto" />
+        <Image src={'https://res.cloudinary.com/djr5bxwfk/image/upload/v1686269337/samples/msm/AnamnesisCoverImage.png'} alt='test' className="w-7/12 lg:w-5/12 h-auto m-auto" width={300} height={300} />
+        {/* <CldImage width="375" height="375" src={`https://res.cloudinary.com/djr5bxwfk/image/upload/v1686269337/samples/msm/AnamnesisCoverImage.png`} alt="test" className="w-7/12 lg:w-5/12 h-auto m-auto" /> */}
         <div className="absolute flex justify-between transform -translate-y-1/2 left-1 md:left-5 right-1 md:right-5 top-1/2">
           <a href="#slide8" className="btn btn-circle">❮</a> 
           <a href="#slide2" className="btn btn-circle">❯</a>
