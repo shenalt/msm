@@ -22,7 +22,7 @@ async function getShows(){
     // Update the BASE_URL in env.local to the deployed url
     // BASE_URL=http://localhost:3000
     // https://msm-3k127hbym-shenalt.vercel.app
-    const res = await fetch(`https://msm-seven.vercel.app/api/getShows`)
+    const res = await fetch(`https://msm-shenalt.vercel.app/api/getShows`)
     //const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getShows`, {cache: "no-cache"})
     // const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
     if(!res.ok){
