@@ -1,4 +1,3 @@
-
 import Image from "next/image"
 import React from 'react'
 import { CldImage } from "next-cloudinary"
@@ -8,19 +7,6 @@ import { PrismaClient } from "@prisma/client"
 import {FaSpotify, FaAmazon, } from "react-icons/fa"
 import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic } from "react-icons/si"
 import { Cast } from "../types/CastType"
-
-async function getShows(){
-    // Update the BASE_URL in env.local to the deployed url
-    // BASE_URL=http://localhost:3000
-    // https://msm-3k127hbym-shenalt.vercel.app
-    const res = await fetch(`https://www.manysidedmedia.com/api/getShows`)
-    //const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getShows`, {cache: "no-cache"})
-    // const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
-    if(!res.ok){
-       console.log(res)
-    }
-    return res.json()
-}
 
 const fetchShows = async () => {
     const prisma = new PrismaClient()
@@ -89,7 +75,7 @@ export default async function MyFirstDungeon(){
                     </div>
                     <div className="collapse-content">
                         <div className="flex flex-col md:flex-row items-center justify-around my-8">
-                            <Image src={'https://res.cloudinary.com/djr5bxwfk/image/upload/v1686269337/samples/msm/AnamnesisCoverImage.png'} alt='test' className="w-7/12 lg:w-5/12 h-auto m-auto" width={300} height={300} />
+                            <Image src={show.picture} alt={show.title} className="w-7/12 lg:w-5/12 h-auto m-auto" width={300} height={300} />
                             {/* <CldImage width="250" height="250" src={`samples/msm/${show.picture}`} alt="test" className="w-full lg:w-1/3 rounded-2xl" /> */}
                             <p className="m-4">{show.description}</p>
                         </div>
@@ -107,13 +93,6 @@ export default async function MyFirstDungeon(){
                         <div className="card lg:card-side card-bordered my-4">
                             <div className="card-body">
                             <iframe src={`${show.spotifyLink}`} width="100%" height="352" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                                {/* 
-                                    <div className="card-actions">
-                                        <Link href={"https://podcasts.apple.com/us/podcast/die-episode-5-the-master/id1601290088?i=1000612755243"} target="_blank">
-                                            <button className="btn btn-primary">More Info</button>
-                                        </Link> 
-                                    </div> 
-                                */}
                             </div>
                         </div>
                     </div>                     

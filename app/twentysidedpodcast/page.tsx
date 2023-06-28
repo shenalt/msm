@@ -12,7 +12,7 @@ import { SiApplepodcasts } from "react-icons/si"
 export default function TwentySidedPodcast(){
     return(
         <div className="z-10 w-full flex flex-col items-center">
-            <Image src={tempPic} alt="Twenty Sided Podcast Logo" className="w-11/12 lg:w-2/5 m-auto mt-8" />
+            <Image src={'https://res.cloudinary.com/djr5bxwfk/image/upload/v1687987968/samples/msm/tspLogo.png'} alt="Twenty Sided Podcast Logo" className="w-11/12 lg:w-2/5 m-auto mt-8" width={400} height={400} />
             <p className="text-2xl m-auto text-center my-8">Listen to Twenty Sided Podcast here:</p>
             <div className="flex flex-row gap-20 items-center justify-center my-8">
                 <Link href={"https://podcasts.apple.com/us/podcast/twenty-sided-podcast/id1578469041"} target="_blank">
@@ -23,11 +23,6 @@ export default function TwentySidedPodcast(){
                 </Link>
             </div>
             <p className="m-auto mt-8">[INSERT BLURB EXPLAINING WHAT TSP IS AND ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
-            <p className="m-auto">[INSERT BLURB EXPLAINING WHAT TSP IS AND ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
-            <p className="m-auto">[INSERT BLURB EXPLAINING WHAT TSP IS AND ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
-            <p className="m-auto">[INSERT BLURB EXPLAINING WHAT TSP IS AND ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
-            <p className="m-auto">[INSERT BLURB EXPLAINING WHAT TSP IS AND ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
-            <p className="m-auto mb-8">[INSERT BLURB EXPLAINING WHAT TSP IS AND ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
 
             {/* ESCAPE FROM THE R.M.S. TITANFALL */}
             <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
