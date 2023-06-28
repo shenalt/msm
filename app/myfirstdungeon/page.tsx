@@ -22,27 +22,27 @@ async function getShows(){
     // Update the BASE_URL in env.local to the deployed url
     // BASE_URL=http://localhost:3000
     // 
-    //const res = await fetch(`https://msm-seven.vercel.app/api/getShows`, {cache: "no-cache"})
+    const res = await fetch(`https://www.manysidedmedia.com/api/getShows`, {cache: "no-cache"})
     //const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getShows`, {cache: "no-cache"})
-    //const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
-    //if(!res.ok){
-    //    console.log(res)
-    //}
-    //return res.json()
+    // const res = await fetch(`${process.env.BASE_URL}/api/getShows`)
+    if(!res.ok){
+       console.log(res)
+    }
+    return res.json()
 }
 
 export default async function MyFirstDungeon(){
 
-    // const data: {
-    //     showId: string; 
-    //     title: string; 
-    //     description: string; 
-    //     picture: string; 
-    //     spotifyLink: string; 
-    //     podcast: string;
-    //     color: string;
-    //     castMembers: Cast[];
-    // }[] = await getShows()
+    const data: {
+        showId: string; 
+        title: string; 
+        description: string; 
+        picture: string; 
+        spotifyLink: string; 
+        podcast: string;
+        color: string;
+        castMembers: Cast[];
+    }[] = await getShows()
 
     return(
         <div className="z-10 w-full flex flex-col items-center">
@@ -77,7 +77,46 @@ export default async function MyFirstDungeon(){
                     GM to run it. Then we circle back around to discuss what went right, what went wrong, and how we can make our next game even better.
                 </p>
                 <p className="m-auto mb-8">[INSERT ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
-            </div>         
+            </div>  
+
+            {data.map((show, index) => (
+                <div className={`${index === data.length-1 ? 'mb-8' : ''} collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50`} key={show.title}>
+                    <input type="checkbox" />
+                    <div className="collapse-title text-xl font-medium border-b">
+                        {show.title}
+                    </div>
+                    <div className="collapse-content">
+                        <div className="flex flex-col md:flex-row items-center justify-around my-8">
+                            {/* <Image src={show.picture} alt={`${show.title} Logo`} width={30} height={30} className="w-full lg:w-1/5 rounded-2xl" /> */}
+                            <CldImage width="250" height="250" src={`samples/msm/${show.picture}`} alt="test" className="w-full lg:w-1/3 rounded-2xl" />
+                            <p className="m-4">{show.description}</p>
+                        </div>
+                        <div className="flex flex-col md:flex-row items-center justify-around my-8">
+                            <div>
+                                <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CAST</h1>
+                                {show.castMembers.map((item) => (
+                                    <h2 className="text-sm my-2" key={item.castId}>{item.name}</h2>
+                                ))}
+                            </div>
+                            <div>
+                                <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CREW</h1>
+                            </div>
+                        </div>
+                        <div className="card lg:card-side card-bordered my-4">
+                            <div className="card-body">
+                            <iframe src={`${show.spotifyLink}`} width="100%" height="352" allowFullScreen={true} allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                                {/* 
+                                    <div className="card-actions">
+                                        <Link href={"https://podcasts.apple.com/us/podcast/die-episode-5-the-master/id1601290088?i=1000612755243"} target="_blank">
+                                            <button className="btn btn-primary">More Info</button>
+                                        </Link> 
+                                    </div> 
+                                */}
+                            </div>
+                        </div>
+                    </div>                     
+                </div>
+            ))}       
 
             {/* DIE */}
             {/* <div className="collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">

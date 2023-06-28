@@ -30,7 +30,7 @@ export default function TwentySidedPodcast(){
             <p className="m-auto mb-8">[INSERT BLURB EXPLAINING WHAT TSP IS AND ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
 
             {/* ESCAPE FROM THE R.M.S. TITANFALL */}
-            {/* <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
+            <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     ESCAPE FROM THE R.M.S. TITANFALL
@@ -192,11 +192,11 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                 </div>
-            </div>  */}
+            </div> 
             {/* ESCAPE FROM THE R.M.S. TITANFALL */}
 
             {/* Prisoners of the Static */}
-            {/* <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow mb-8 bg-msmBlue">
+            <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow mb-8 bg-msmBlue">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     PRISONERS OF THE STATIC
@@ -446,7 +446,7 @@ export default function TwentySidedPodcast(){
                         </div>
                     </div>
                 </div>
-            </div>  */}
+            </div> 
             {/* Prisoners of the Static */}
         </div>
     )
