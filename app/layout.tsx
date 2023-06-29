@@ -10,7 +10,7 @@ const roboto = Roboto({
 
 export const metadata = {
   title: 'Many Sided Media Company',
-  description: 'Media company home to the Twenty Sided Podcast',
+  description: 'Media company home to My First Dungeon',
 }
 
 export default function RootLayout({
