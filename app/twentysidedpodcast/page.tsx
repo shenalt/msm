@@ -22,7 +22,6 @@ export default function TwentySidedPodcast(){
                     <FaSpotify className="cursor-pointer hover:fill-spotifyGreen hover:scale-150 transition-all duration-500" size={70} />
                 </Link>
             </div>
-            <p className="m-auto mt-8">[INSERT BLURB EXPLAINING WHAT TSP IS AND ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
 
             {/* ESCAPE FROM THE R.M.S. TITANFALL */}
             <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">

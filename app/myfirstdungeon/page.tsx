@@ -64,7 +64,6 @@ export default async function MyFirstDungeon(){
                     My First Dungeon is the tabletop role-playing podcast where we help players learn new games and make each one better than the last. Each season we choose a new game and a different 
                     GM to run it. Then we circle back around to discuss what went right, what went wrong, and how we can make our next game even better.
                 </p>
-                <p className="m-auto mb-8">[INSERT ANYTHING ELSE YOU THINK SHOULD GO HERE]</p>
             </div>  
 
             {data.map((show, index) => (

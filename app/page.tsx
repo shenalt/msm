@@ -12,10 +12,10 @@ export default function Home() {
         alt='Logo for Many Sided Media Company' 
         className='lg:w-5/12 h-auto animate-bounceFP' 
       />
-      <div className='w-full lg:w-2/3 m-4'>
+      <div className='w-full lg:w-2/3 mx-4 mt-4 mb-16 border border-t-msmRed border-b-msmBlue border-l-msmYellow border-r-msmYellow'>
         <p className='m-8 text-xl'>
-          Hello, and welcome to Many Sided Media! You may know us best as the team behind My First Dungeon, the Twenty Sided Podcast, and the Twenty Sided Newsletter an actual play podcast in which we introduce 
-          game masters and listeners to new TTRPGs and help make each game better than the last. But with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
+          Hello, and welcome to Many Sided Media! You may know us best as the team behind My First Dungeon, the Twenty Sided Podcast, and the Twenty 
+          Sided Newsletter. But with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
           with the goal of bringing you even more TTRPG content, and this is the absolute best place to keep up to date with each exciting new venture. 
         </p>
         <p className='m-8'>
@@ -24,7 +24,7 @@ export default function Home() {
         <p className='m-8'>
           Patrons get access to even more actual play episodes featuring both new games and old favorites, as well as cast talk backs for each season, interviews with TTRP all-stars and more fun goodies. There’s 
           even an exclusive Discord channel for you to tell us all the things you like, the things you love, and the things you want to see more of. If you’re looking to support us in producing all the major MFD 
-          seasons, plus get all the bonus goodies, then come on over and join us in the Dice Pool (aka our Patreon). SPLASH!
+          seasons, plus get all the bonus goodies, then come on over and join us in the Dice Pool. SPLASH!
         </p>
       </div>
 
