@@ -8,5 +8,6 @@ export type ShowType = {
     spotifyLink: string; 
     podcast: string;
     color: string;
+    order: number;
     castMembers: Cast[];
 }

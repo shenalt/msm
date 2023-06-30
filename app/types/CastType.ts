@@ -1,9 +1,7 @@
 export type Cast = {
-    //[x: string]: ReactNode
     castId: string;
     name: string;
-    headshot: string;
+    role: string;
     podcast: string;
     showId: string;
-    //shows: Show;
 }

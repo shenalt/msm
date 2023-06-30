@@ -2,16 +2,19 @@ import Image from "next/image"
 import React from 'react'
 import { CldImage } from "next-cloudinary"
 import Link from "next/link"
-import myFirstDungeon from "../../public/myFirstDungeon/firstDungeonCopy.jpg"
+import myFirstDungeon from "../../public/myFirstDungeon/myFirstDungeonTwo.png"
 import { PrismaClient } from "@prisma/client"
 import {FaSpotify, FaAmazon, } from "react-icons/fa"
-import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic } from "react-icons/si"
+import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic, } from "react-icons/si"
 import { Cast } from "../types/CastType"
 
 const fetchShows = async () => {
     const prisma = new PrismaClient()
     // Get shows
     const theShows = await prisma.show.findMany({
+        orderBy: {
+            order: 'asc',
+        },
         include: {
             castMembers: true,
         },
@@ -29,12 +32,13 @@ export default async function MyFirstDungeon(){
         spotifyLink: string; 
         podcast: string;
         color: string;
+        order: number;
         castMembers: Cast[];
     }[] = await fetchShows()
 
     return(
         <div className="z-10 w-full flex flex-col items-center">
-            <Image src={myFirstDungeon} alt="My First Dungeon Logo" className="w-11/12 lg:w-3/6 h-4/5 m-auto mt-8" />
+            <Image src={myFirstDungeon} alt="My First Dungeon Logo" className="w-11/12 lg:w-1/3 h-4/5 m-auto mt-8" />
             <p className="text-2xl m-auto text-center my-8">Listen to My First Dungeon here:</p>
             <div className="flex flex-row flex-wrap gap-20 items-center justify-center my-8">
                 <Link href={"https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088"} target="_blank">
@@ -81,12 +85,10 @@ export default async function MyFirstDungeon(){
                         <div className="flex flex-col md:flex-row items-center justify-around my-8">
                             <div>
                                 <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CAST</h1>
-                                {show.castMembers.map((item) => (
-                                    <h2 className="text-sm my-2" key={item.castId}>{item.name}</h2>
+                                {/* You can make the className of the h1 hidden based on a condition and make an oposite h1 tag to display CAST/CREW and do same for below */}
+                                {show.castMembers.map((cast) => (                               
+                                    <h2 className="text-sm my-2" key={cast.castId}>{cast.name} as {cast.role}</h2>
                                 ))}
-                            </div>
-                            <div>
-                                <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CREW</h1>
                             </div>
                         </div>
                         <div className="card lg:card-side card-bordered my-4">

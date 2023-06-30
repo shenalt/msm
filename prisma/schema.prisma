@@ -15,13 +15,14 @@ model Show {
   spotifyLink String
   podcast     String
   color       String @default("FFFFFF")
+  order       Int
   castMembers Cast[]
 }
 
 model Cast {
-  castId   String @unique @default(cuid())
+  castId   String @id @unique @default(cuid())
   name     String
-  headshot String
+  role     String @default("")
   podcast  String
   showId   String
   shows    Show   @relation(fields: [showId], references: [showId])
