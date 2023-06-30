@@ -38,6 +38,8 @@ export default function ContactUs(){
           setName('');
           setEmail('');
           setMessage('');
+          setSender('options')
+          setSubject('')
           e.currentTarget.reset()
     };
 
@@ -82,12 +84,14 @@ export default function ContactUs(){
                             name='whoSending' 
                             id='whoSending'
                             onChange={e => setSender(e.currentTarget.value)}
+                            required
                         >
                             <option value="options">Select an option</option>
                             <option value="fan">Fan</option>
                             <option value="player">Prospective Player</option> 
                             <option value="press">Press Outlet</option> 
                             <option value="game-designer">Game Designer</option>
+                            <option value="game-designer">Other</option>
                         </select>
                     </div>
                     <div className="form-control items-center justify-center my-4">
@@ -121,7 +125,7 @@ export default function ContactUs(){
                     <div className='form-control items-center justify-center'>
                         <button 
                             type='submit' 
-                            className={`btn ${name === '' || email === '' || message === '' || sender === 'options' ? 'btn-disabled' : 'text-neutral-50'} my-4 bg-msmRed hover:bg-msmRed hover:scale-125 transition-all duration-500`}
+                            className={`btn ${name === '' || email === '' || subject === '' || message === '' || sender === 'options' ? 'btn-disabled' : 'text-neutral-50'} my-4 bg-msmRed hover:bg-msmRed hover:scale-125 transition-all duration-500`}
                         >
                             Submit
                         </button>
