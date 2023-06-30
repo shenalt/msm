@@ -83,6 +83,7 @@ export default function Nav(){
                             </Link>
                         </ul>
                     </div>
+                    <Link target="_blank" href={'https://www.patreon.com/MyFirstDungeonPod/creators'}><li className="mx-8 my-1 cursor-pointer hover:text-patreonOrange hover:scale-125 transition-all duration-100">Patreon</li></Link>
                     <Link href={'/aboutus'}><li className="mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">About Us</li></Link>
                     <Link href={'/contactus'}><li className="mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Work With Us</li></Link>
                 </ul>
@@ -181,6 +182,28 @@ export default function Nav(){
                             >
                                 <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-10`}>
                                     ABOUT US
+                                </p>
+                            </motion.div>
+                        </Link> 
+                        <Link 
+                            href={'https://www.patreon.com/MyFirstDungeonPod/creators'}
+                            target="_blank"
+                            onClick={() => {
+                                setIsOpen(!isOpen);
+                                setScroll(isOpen);
+                            }}
+                        >
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.5 },
+                                }}
+                                whileTap={{ 
+                                    scale: 0.9, 
+                                }}
+                            >
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-patreonOrange duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-10`}>
+                                    PATREON
                                 </p>
                             </motion.div>
                         </Link> 

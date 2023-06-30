@@ -91,7 +91,7 @@ export default function ContactUs(){
                             <option value="player">Prospective Player</option> 
                             <option value="press">Press Outlet</option> 
                             <option value="game-designer">Game Designer</option>
-                            <option value="game-designer">Other</option>
+                            <option value="other">Other</option>
                         </select>
                     </div>
                     <div className="form-control items-center justify-center my-4">
