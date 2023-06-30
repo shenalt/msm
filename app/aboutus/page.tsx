@@ -19,7 +19,7 @@ export default function AboutUs(){
                         involved. Each season features an interview between Brian and our GM (often with a special appearance from the creator of the game themselves), an actual play of the game with our core cast 
                         plus lots of exciting special guests, and a talkback where we discuss what went right, what went wrong and how we can make the next game even better than the last.
                     </h1>
-                    <h1 className="m-4 text-xl">Many Sided Media plans to build on the fun times we’ve had on My First Dungeon with a variety of tabletop shows, the Twenty Sided Newsletter, TKTK</h1>
+                    <h1 className="m-4 text-xl">Many Sided Media plans to build on the fun times we’ve had on My First Dungeon with a variety of tabletop shows, the <Link className="text-msmYellowCompBlue" target="_blank" href={'https://twentysidednewsletter.substack.com/'}>Twenty Sided Newsletter</Link>, Many Sided Media plans to build on the fun times we’ve had on My First Dungeon with a variety of tabletop shows, the Twenty Sided Newsletter, [and so many plans for the future.]</h1>
                     <h1 className="m-4 text-xl">We are an NYC-based group but love to collaborate with players, GMs, and designers all over the world. If you’re interested in working or playing with us, reach out!</h1>
                 {/* </div> */}
             </div>
