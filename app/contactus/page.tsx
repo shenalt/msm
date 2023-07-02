@@ -47,7 +47,7 @@ export default function ContactUs(){
         <div className="z-10 w-full flex flex-col">
             <ToastContainer />
             <div className='flex flex-col items-center justify-center'>
-            <h1 className="m-8 text-xl">Prospective players, game designers, press outlets, fans, buds, or anyone else can contact us by filling out the form below!</h1>
+            <h1 className="m-8 text-xl">Prospective players, game designers, press outlets, fans, friends, or anyone else can contact us by filling out the form below!</h1>
                 <form className='w-11/12 xl:w-2/4 border m-8 p-8 rounded-lg bg-msmYellow' autoComplete='off' ref={form} onSubmit={sendEmail}>
                     <div className="form-control items-center justify-center my-4">
                         <label htmlFor='name' className="label">
