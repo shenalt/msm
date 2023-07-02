@@ -38,7 +38,13 @@ export default async function MyFirstDungeon(){
 
     return(
         <div className="z-10 w-full flex flex-col items-center">
-            <Image src={myFirstDungeon} alt="My First Dungeon Logo" className="w-11/12 lg:w-1/3 h-4/5 m-auto mt-8" />
+            <Image src={myFirstDungeon} alt="My First Dungeon Logo" className="w-11/12 lg:w-1/3 h-4/5 m-auto my-6" />
+            <div className="w-full md:w-4/6 mx-4 my-6">
+                <p className="m-auto p-2 text-lg">
+                    My First Dungeon is the tabletop role-playing podcast where we help players learn new games and make each one better than the last. Each season we choose a new game and a different 
+                    GM to run it. Then we circle back around to discuss what went right, what went wrong, and how we can make our next game even better.
+                </p>
+            </div> 
             <p className="text-2xl m-auto text-center my-8">Listen to My First Dungeon here:</p>
             <div className="flex flex-row flex-wrap gap-20 items-center justify-center my-8">
                 <Link href={"https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088"} target="_blank">
@@ -62,28 +68,26 @@ export default async function MyFirstDungeon(){
                 <Link href={"https://radiopublic.com/my-first-dungeon-GZvaRE"} target="_blank">
                     <SiRadiopublic className="cursor-pointer hover:fill-radioPublicRed hover:scale-150 transition-all duration-500" size={70} />
                 </Link>
-            </div>
-            <div className="w-full md:w-4/6">
-                <p className="m-auto mx-4 my-8">
-                    My First Dungeon is the tabletop role-playing podcast where we help players learn new games and make each one better than the last. Each season we choose a new game and a different 
-                    GM to run it. Then we circle back around to discuss what went right, what went wrong, and how we can make our next game even better.
-                </p>
-            </div>  
+            </div> 
 
             {data.map((show, index) => (
                 <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50`} key={show.title}>
                     <input type="checkbox" />
-                    <div className="collapse-title text-xl font-medium border-b">
+                    <div className="collapse-title text-2xl font-semibold border-b">
                         {show.title}
                     </div>
                     <div className="collapse-content">
                         <div className="flex flex-col md:flex-row items-center justify-around my-8">
                             <Image src={show.picture} alt={show.title} className="w-7/12 lg:w-5/12 h-auto m-auto" width={300} height={300} />
                             <div className="p-2 m-8 w-full">
-                                <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CAST</h1>
-                                {/* You can make the className of the h1 hidden based on a condition and make an oposite h1 tag to display CAST/CREW and do same for below */}
-                                {show.castMembers.map((cast) => (                               
-                                    <h2 className="text-base text-center my-2" key={cast.castId}>{cast.name} as {cast.role}</h2>
+                                {/* ****** TEMPORARY FIX for having cast/crew for DIE ****** */}
+                                <h1 className={`${index === 1 ? "" : "hidden"} text-center text-msmRedAnalagYellow text-5xl my-4`}>CAST/CREW</h1>
+                                <h1 className={`${index === 1 ? "hidden" : ""} text-center text-msmRedAnalagYellow text-5xl my-4`}>CAST</h1>
+                                {show.castMembers.map((cast) => (    
+                                    <>                           
+                                        <h2 className={`${cast.name === "OST" || cast.name === "Produced" ? "" : "hidden"} text-base text-center my-2`} key={cast.castId}>{cast.name} by {cast.role}</h2>
+                                        <h2 className={`${cast.name === "OST" || cast.name === "Produced" ? "hidden" : ""} text-base text-center my-2`} key={cast.castId}>{cast.name} as {cast.role}</h2>
+                                    </>
                                 ))}
                             </div>
                             <p className="m-4 text-2xl">{show.description}</p>

@@ -33,9 +33,15 @@ module.exports = {
             'animation-timing-function': 'cubic-bezier(0.8,0,1,1)',
           },
         },
+        pulseButton: {
+          '50%': {
+              opacity: .5,
+          },
+        },
       },
       animation: {
         'bounceFP': 'bounceFrontPage 3s linear infinite',
+        'pulseFP': 'pulseButton .75s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       maxWidth: {
         'full-card': '600px',
@@ -49,6 +55,7 @@ module.exports = {
       applePurple: '#D56DFB',
       discordPurple: '#7289da',
       patreonOrange: '#f96854',
+      patronAnalagous: "#F9BB54",
       amazonOrange: '#FF9800',
       castboxOrange: '#F55B23',
       googleBlue: '#4285F4',
@@ -70,6 +77,10 @@ module.exports = {
       anamnesisColor: "#483f3a",
       tenCandlesColor: "#302c2b",
       dieColor: "#b76d62",
+      newsletterPurple: "#7756E3",
+      newsletterAnalagous: "#E3BE56",
+      whiteColor: "#FFFFFF",
+      blackColor: "#000000",
     },
   },
   plugins: [require("daisyui")],

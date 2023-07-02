@@ -36,7 +36,7 @@ export default function Nav(){
 
     return(
         // LOGO
-        <nav className="font-rnf flex-row flex items-center justify-between bg-bkgColor border-b">
+        <nav className="font-rnf flex-row flex items-center justify-between bg-bkgColor border-b border-b-msmYellow">
             <div className="flex items-center gap-8 p-4 md:p-5">
                 <motion.div
                     whileHover={{
@@ -83,9 +83,10 @@ export default function Nav(){
                             </Link>
                         </ul>
                     </div>
-                    <Link target="_blank" href={'https://www.patreon.com/MyFirstDungeonPod/creators'}><li className="mx-8 my-1 cursor-pointer hover:text-patreonOrange hover:scale-125 transition-all duration-100">Patreon</li></Link>
-                    <Link href={'/aboutus'}><li className="mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">About Us</li></Link>
-                    <Link href={'/contactus'}><li className="mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Work With Us</li></Link>
+                    <Link target="_blank" href={'https://www.patreon.com/MyFirstDungeonPod/creators'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-patreonOrange hover:scale-125 transition-all duration-100">Patreon</li></Link>
+                    <Link target="_blank" href={'https://twentysidednewsletter.substack.com/'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-newsletterPurple hover:scale-125 transition-all duration-100">Newsletter</li></Link>
+                    <Link href={'/aboutus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">About Us</li></Link>
+                    <Link href={'/contactus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Work With Us</li></Link>
                 </ul>
             </div>
         {/* REGULAR NAV FOR DESKTOP */}
@@ -94,7 +95,7 @@ export default function Nav(){
             <div className="block lg:hidden">   
                 {/* 3 LINES */}
                 <button 
-                    className={`absolute top-[5%] right-8 flex flex-col justify-around w-8 h-8 border-none cursor-pointer p-0 z-20 transition-all focus:outline-none`}
+                    className={`absolute top-[4%] right-6 flex flex-col justify-around w-8 h-8 border-none cursor-pointer p-0 z-20 transition-all focus:outline-none`}
                     onClick={() => {
                         setIsOpen(!isOpen);
                         setScroll(isOpen);
@@ -118,13 +119,23 @@ export default function Nav(){
                         className={`w-full ${isOpen ? "translate-x-0" : "translate-x-[100%]"} transition-all duration-300 lg:w-2/6 flex flex-col justify-center bg-msmBlue h-screen text-left p-8 absolute top-0 right-0`}
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <div className="flex gap-8 items-center justify-center mb-10">
+                        {/* PHONES */}
+                        <div className="flex gap-8 items-center justify-center my-10 sm:hidden">
                             <Link href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target="_blank"><FaPatreon className="cursor-pointer hover:fill-patreonOrange transition-all duration-500" size={28} /></Link>
                             <Link href={'https://discord.gg/KevdEDMQNa'} target="_blank"><FaDiscord className="cursor-pointer hover:fill-discordPurple transition-all duration-500" size={28} /></Link>
                             <Link href={'https://open.spotify.com/show/5BpUwGLHOKzuQ8ycOvIedn'} target="_blank"><FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={28} /></Link>
                             <Link href={'https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088'} target="_blank"><SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={28} /></Link>
                         </div>
-                        <div className="dropdown dropdown-end cursor-pointer my-10">
+                        {/* PHONES */}
+                        {/* TABLET */}
+                        <div className="hidden sm:flex sm:gap-16 sm:items-center sm:justify-center sm:my-10">
+                            <Link href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target="_blank"><FaPatreon className="cursor-pointer hover:fill-patreonOrange transition-all duration-500" size={56} /></Link>
+                            <Link href={'https://discord.gg/KevdEDMQNa'} target="_blank"><FaDiscord className="cursor-pointer hover:fill-discordPurple transition-all duration-500" size={56} /></Link>
+                            <Link href={'https://open.spotify.com/show/5BpUwGLHOKzuQ8ycOvIedn'} target="_blank"><FaSpotify className="cursor-pointer hover:fill-spotifyGreen transition-all duration-500" size={56} /></Link>
+                            <Link href={'https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088'} target="_blank"><SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={56} /></Link>
+                        </div>
+                        {/* TABLET */}
+                        <div className="dropdown dropdown-end cursor-pointer my-6 sm:my-10">
                             <motion.div 
                                 className="flex flex-row items-center justify-center"
                                 whileHover={{
@@ -136,14 +147,14 @@ export default function Nav(){
                                 }}
                             >
                                 <p 
-                                    className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 hover:text-msmYellow transition-all text-2xl font-bold tracking-wide no-underline text-center mx-2`}
+                                    className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 hover:text-msmYellow transition-all text-2xl font-bold tracking-wide no-underline text-center mx-2 sm:text-3xl`}
                                     tabIndex={0}
                                 >
                                     OUR SHOWS
                                 </p> 
                                 <svg tabIndex={0} className="dropdown dropdown-end cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" id="arrow-drop-down"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M7 10l5 5 5-5H7z"></path></svg>
                             </motion.div>
-                            <ul tabIndex={0} className="dropdown-content menu p-4 space-y-4 shadow rounded-box w-full text-center bg-msmYellow">
+                            <ul tabIndex={0} className="dropdown-content menu p-4 sm:p-8 space-y-4 shadow rounded-box w-full text-center bg-msmYellow">
                                 <Link
                                     href={'/myfirstdungeon'}
                                     onClick={() => {
@@ -151,7 +162,7 @@ export default function Nav(){
                                         setScroll(isOpen);
                                     }}
                                 >
-                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500">My First Dungeon</li>
+                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 sm:p-1">My First Dungeon</li>
                                 </Link>
                                 <Link 
                                     href={'/twentysidedpodcast'}
@@ -160,10 +171,46 @@ export default function Nav(){
                                         setScroll(isOpen);
                                     }}
                                 >
-                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500">Twenty Sided Podcast</li>
+                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 sm:p-1">Twenty Sided Podcast</li>
                                 </Link>
                             </ul>
                         </div>
+                        <Link 
+                            href={'https://www.patreon.com/MyFirstDungeonPod/creators'}
+                            target="_blank"                      
+                        >
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.5 },
+                                }}
+                                whileTap={{ 
+                                    scale: 0.9, 
+                                }}
+                            >
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-patreonOrange duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                    PATREON
+                                </p>
+                            </motion.div>
+                        </Link>
+                        <Link 
+                            href={'https://twentysidednewsletter.substack.com/'}
+                            target="_blank"
+                        >
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.5 },
+                                }}
+                                whileTap={{ 
+                                    scale: 0.9, 
+                                }}
+                            >
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-newsletterPurple duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                    NEWSLETTER
+                                </p>
+                            </motion.div>
+                        </Link>
                         <Link 
                             href={'/aboutus'}
                             onClick={() => {
@@ -180,33 +227,11 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-10`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
                                     ABOUT US
                                 </p>
                             </motion.div>
-                        </Link> 
-                        <Link 
-                            href={'https://www.patreon.com/MyFirstDungeonPod/creators'}
-                            target="_blank"
-                            onClick={() => {
-                                setIsOpen(!isOpen);
-                                setScroll(isOpen);
-                            }}
-                        >
-                            <motion.div
-                                whileHover={{
-                                    scale: 1.2,
-                                    transition: { duration: 0.5 },
-                                }}
-                                whileTap={{ 
-                                    scale: 0.9, 
-                                }}
-                            >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-patreonOrange duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-10`}>
-                                    PATREON
-                                </p>
-                            </motion.div>
-                        </Link> 
+                        </Link>  
                         <Link 
                             href={'/contactus'}
                             onClick={() => {
@@ -223,7 +248,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 lg:my-10`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
                                     WORK WITH US
                                 </p>
                             </motion.div>
