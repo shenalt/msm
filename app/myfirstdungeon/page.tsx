@@ -71,9 +71,22 @@ export default async function MyFirstDungeon(){
             </div> 
 
             {data.map((show, index) => (
-                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-${show.color} text-neutral-50`} key={show.title}>
+                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow 
+                    ${
+                        show.showId === "1" ? "bg-dieColor" : 
+                        show.showId === "2" ? "bg-anamnesisColor" : 
+                        show.showId === "3" ? "bg-tenCandlesColor" :
+                        show.showId === "4" ? "bg-honeyHeistColor" :
+                        show.showId === "5" ? "bg-wanderhomeColor" :
+                        show.showId === "6" ? "bg-schroedingerColor" :
+                        show.showId === "7" ? "bg-chickensColor" :
+                        show.showId === "8" ? "bg-societyColor" :
+                        "bg-deplorableColor" 
+                    }
+                    text-neutral-50`} key={show.title}
+                >
                     <input type="checkbox" />
-                    <div className="collapse-title text-2xl font-semibold border-b">
+                    <div className={`collapse-title text-2xl font-semibold border-b ${show.showId === "8" ? "text-blackColor" : ""}`}>
                         {show.title}
                     </div>
                     <div className="collapse-content">
@@ -82,15 +95,16 @@ export default async function MyFirstDungeon(){
                             <div className="p-2 m-8 w-full">
                                 {/* ****** TEMPORARY FIX for having cast/crew for DIE ****** */}
                                 <h1 className={`${index === 1 ? "" : "hidden"} text-center text-msmRedAnalagYellow text-5xl my-4`}>CAST/CREW</h1>
-                                <h1 className={`${index === 1 ? "hidden" : ""} text-center text-msmRedAnalagYellow text-5xl my-4`}>CAST</h1>
+                                <h1 className={`${index === 1 ? "hidden" : ""} text-center ${show.showId === "8" ? "text-msmRed" : "text-msmRedAnalagYellow"} text-5xl my-4`}>CAST</h1>
                                 {show.castMembers.map((cast) => (    
                                     <>                           
                                         <h2 className={`${cast.name === "OST" || cast.name === "Produced" ? "" : "hidden"} text-base text-center my-2`} key={cast.castId}>{cast.name} by {cast.role}</h2>
-                                        <h2 className={`${cast.name === "OST" || cast.name === "Produced" ? "hidden" : ""} text-base text-center my-2`} key={cast.castId}>{cast.name} as {cast.role}</h2>
+                                        <h2 className={`${cast.name === "OST" || cast.name === "Produced" ? "hidden" : ""} ${show.showId === "8" ? "text-blackColor" : ""} text-base text-center my-2`} key={cast.castId}>{cast.name} as {cast.role}</h2>
                                     </>
                                 ))}
+                                {/* ****** TEMPORARY FIX for having cast/crew for DIE ****** */}
                             </div>
-                            <p className="m-4 text-2xl">{show.description}</p>
+                            <p className={`m-4 text-2xl ${show.showId === "8" ? "text-blackColor" : ""}`}>{show.description}</p>
                         </div>
                         {/* <div className="flex flex-col md:flex-row items-center justify-around my-8">
                             

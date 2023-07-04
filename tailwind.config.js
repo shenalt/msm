@@ -87,7 +87,7 @@ module.exports = {
       tenCandlesColor: "#F92525",
       wanderhomeColor: "#B8A78A",
       chickensColor: "#B01606",
-      societyColor: "#FBECC8",
+      societyColor: "#F6D98C",
       dieColor: "#E2483A",
       anamnesisColor: "#867C74",
       honeyHeistColor: "#FDBF19",
