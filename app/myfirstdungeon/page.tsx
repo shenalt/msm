@@ -71,7 +71,7 @@ export default async function MyFirstDungeon(){
             </div> 
 
             {data.map((show, index) => (
-                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50`} key={show.title}>
+                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-${show.color} text-neutral-50`} key={show.title}>
                     <input type="checkbox" />
                     <div className="collapse-title text-2xl font-semibold border-b">
                         {show.title}
@@ -105,7 +105,7 @@ export default async function MyFirstDungeon(){
             ))}   
             <div className={`collapse w-11/12 mb-8 sm:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50`}>
                 <input type="checkbox" />
-                <div className="collapse-title text-xl font-medium border-b">
+                <div className="collapse-title text-2xl font-semibold border-b">
                     Interviews
                 </div>
                 <div className="collapse-content">
