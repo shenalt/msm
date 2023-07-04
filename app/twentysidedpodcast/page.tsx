@@ -1,11 +1,6 @@
 'use client'
-
 import Image from "next/image"
 import Link from "next/link"
-import titanfall from "../../public/twenty/escapeFromTitanfall.png"
-import tempPic from "../../public/Logo_Large_BW.png"
-// import prisoner from "../../public/twenty/prisonerStatic.PNG"
-// import tspLogo from "../../public/twenty/tspLogo.PNG"
 import {FaSpotify,} from "react-icons/fa"
 import { SiApplepodcasts } from "react-icons/si"
 
@@ -32,11 +27,11 @@ export default function TwentySidedPodcast(){
                 <div className="collapse-content">
                     <div className="flex flex-col items-center justify-center my-8">
                         <div>
-                            <h1 className="text-center text-msmRedAnalagYellow text-2xl my-4">CAST</h1>
-                            <h2 className="text-xs my-2">Blythe Roberson as Meadhbh Snailbaby</h2>
-                            <h2 className="text-xs my-2">Jenny Gustafson as Karis Thornbrow</h2>
-                            <h2 className="text-xs my-2">Kevin Bauer as Cleave Beefchief</h2>
-                            <h2 className="text-xs my-2">Brian Flaherty as The DM (aka everybody else)</h2>
+                            <h1 className="text-center text-msmRedAnalagYellow text-5xl my-4">CAST</h1>
+                            <h2 className="text-base my-2">Blythe Roberson as Meadhbh Snailbaby</h2>
+                            <h2 className="text-base my-2">Jenny Gustafson as Karis Thornbrow</h2>
+                            <h2 className="text-basexs my-2">Kevin Bauer as Cleave Beefchief</h2>
+                            <h2 className="text-base my-2">Brian Flaherty as The DM (aka everybody else)</h2>
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered my-4">
@@ -58,11 +53,11 @@ export default function TwentySidedPodcast(){
                 <div className="collapse-content"> 
                     <div className="flex flex-col items-center justify-center">
                         <div>
-                            <h1 className="text-center text-msmBlueTriYellow text-2xl my-4">CAST</h1>
-                            <h2 className="text-xs my-2">Abby Hepworth as Natasha Bol'shoy-Kot</h2>
-                            <h2 className="text-xs my-2">Shenuque Tissera as Yaksha Rah</h2>
-                            <h2 className="text-xs my-2">Noah Gebstadt as Sienni Saari</h2>
-                            <h2 className="text-xs my-2">Brian Flaherty as The DM (aka everybody else)</h2>
+                            <h1 className="text-center text-msmBlueTriYellow text-5xl my-4">CAST</h1>
+                            <h2 className="text-base my-2">Abby Hepworth as Natasha Bol'shoy-Kot</h2>
+                            <h2 className="text-base my-2">Shenuque Tissera as Yaksha Rah</h2>
+                            <h2 className="text-base my-2">Noah Gebstadt as Sienni Saari</h2>
+                            <h2 className="text-base my-2">Brian Flaherty as The DM (aka everybody else)</h2>
                         </div>
                     </div>
                     <div className="card lg:card-side card-bordered my-4">

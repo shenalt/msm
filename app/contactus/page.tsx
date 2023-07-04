@@ -58,7 +58,7 @@ export default function ContactUs(){
                             placeholder="Name" 
                             name='name'
                             id='name'
-                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 placeholder:text-neutral-50 ${name === '' ? 'bg-neutral-900 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`}
+                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 ${name === '' ? 'bg-neutral-100 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`}
                             required 
                             onChange={e => setName(e.currentTarget.value)}
                         />
@@ -72,7 +72,7 @@ export default function ContactUs(){
                             placeholder="Email" 
                             name='email'
                             id='email'
-                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 placeholder:text-neutral-50 ${email === '' ? 'bg-neutral-900 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`}
+                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 ${email === '' ? 'bg-neutral-100 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`}
                             required 
                             onChange={e => setEmail(e.currentTarget.value)}
                         />
@@ -80,7 +80,7 @@ export default function ContactUs(){
                     <div className='form-control items-center justify-center my-4'>
                         <label className="label" htmlFor='whoSending'>Who are you?</label>
                         <select 
-                            className={`select select-bordered w-full sm:w-3/4 lg:w-3/5 ${sender === 'options' ? 'bg-neutral-900 bg-opacity-50 text-neutral-50' : 'bg-msmBlue text-neutral-900'} transition-all duration-500`} 
+                            className={`select select-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 ${sender === 'options' ? 'bg-neutral-100 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`} 
                             name='whoSending' 
                             id='whoSending'
                             onChange={e => setSender(e.currentTarget.value)}
@@ -103,7 +103,7 @@ export default function ContactUs(){
                             placeholder="Subject" 
                             name='subject'
                             id='subject'
-                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 placeholder:text-neutral-50 ${subject === '' ? 'bg-neutral-900 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`} 
+                            className={`input input-bordered w-full sm:w-3/4 lg:w-3/5 text-neutral-900 ${subject === '' ? 'bg-neutral-100 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`} 
                             required 
                             onChange={e => setSubject(e.currentTarget.value)}
                         />
@@ -113,7 +113,7 @@ export default function ContactUs(){
                             <span className="label-text">Message</span>
                         </label> 
                         <textarea 
-                            className={`textarea w-full sm:w-3/4 lg:w-3/5 h-80 textarea-bordered text-neutral-900 placeholder:text-neutral-50 ${message === '' ? 'bg-neutral-900 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`} 
+                            className={`textarea w-full sm:w-3/4 lg:w-3/5 h-80 textarea-bordered text-neutral-900 ${message === '' ? 'bg-neutral-100 bg-opacity-50' : 'bg-msmBlue'} transition-all duration-500`} 
                             placeholder="Message" 
                             name='message'
                             id='message'
