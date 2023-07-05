@@ -92,6 +92,8 @@ module.exports = {
       anamnesisColor: "#867C74",
       honeyHeistColor: "#FDBF19",
       deplorableColor: "#AD87E4",
+      titanfallColor: "#3C5871",
+      prisonersColor: "#DA4225",
     },
   },
   plugins: [require("daisyui")],

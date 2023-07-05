@@ -19,7 +19,7 @@ export default function TwentySidedPodcast(){
             </div>
 
             {/* ESCAPE FROM THE R.M.S. TITANFALL */}
-            <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow bg-msmRed text-neutral-50">
+            <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow bg-titanfallColor text-neutral-50">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     ESCAPE from the R.M.S. TITANFALL
@@ -45,7 +45,7 @@ export default function TwentySidedPodcast(){
 
             {/* Prisoners of the Static */}
             {/* https://res.cloudinary.com/djr5bxwfk/image/upload/v1688108230/samples/msm/prisonerStatic.png */}
-            <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow mb-8 bg-msmBlue">
+            <div className="collapse w-11/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow mb-8 bg-prisonersColor text-neutral-50">
                 <input type="checkbox" /> 
                 <div className="collapse-title text-xl font-medium border-b">
                     Prisoners of the Static

@@ -37,7 +37,7 @@ export default function Home() {
       <div className='w-full lg:w-2/3 mx-4 mt-4 mb-16 border translate lg:border-l-0 lg:border-r-0 border-t-msmRed border-b-msmBlue border-l-msmYellow border-r-msmYellow'>
         <p className='lg:hidden m-8 text-lg'>
           Hello, and welcome to Many Sided Media! You may know us best as the team behind My First Dungeon, the Twenty Sided Podcast, and the <Link className="text-newsletterTint hover:text-newsletterPurple transition-all duration-500" target="_blank" href={'https://twentysidednewsletter.substack.com/'}>Twenty Sided Newsletter</Link> 
-          Sided Newsletter. But with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
+          . But with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
           with the goal of bringing you even more TTRPG content, and this is the absolute best place to keep up to date with each exciting new venture. 
         </p>
         <p className='m-8 text-lg'>
