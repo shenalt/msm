@@ -34,7 +34,7 @@ export default function Home() {
         alt='Logo for Many Sided Media Company' 
         className='w-full lg:w-1/3 h-auto animate-bounceFP' 
       />
-      <div className='w-full lg:w-2/3 mx-4 mt-4 mb-16 border translate lg:border-l-0 lg:border-r-0 border-t-msmRed border-b-msmBlue border-l-msmYellow border-r-msmYellow'>
+      <div className='w-full lg:w-2/3 m-4 border translate lg:border-l-0 lg:border-r-0 border-t-msmRed border-b-msmBlue border-l-msmYellow border-r-msmYellow'>
         <p className='lg:hidden m-8 text-lg'>
           Hello, and welcome to Many Sided Media! You may know us best as the team behind My First Dungeon, the Twenty Sided Podcast, and the <Link className="text-newsletterTint hover:text-newsletterPurple transition-all duration-500" target="_blank" href={'https://twentysidednewsletter.substack.com/'}>Twenty Sided Newsletter</Link> 
           . But with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
@@ -50,7 +50,19 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="carousel w-full m-4">
+      <Link href={'/myfirstdungeon'}>
+        <div className='flex flex-row flex-wrap items-center justify-center my-8'>       
+            <CldImage width="200" height="200" src={'https://res.cloudinary.com/djr5bxwfk/image/upload/v1686269652/samples/msm/TenCandlesCoverImage.jpg'} alt='TenCandles' />
+            <CldImage width="200" height="200" src={`https://res.cloudinary.com/djr5bxwfk/image/upload/v1687290373/samples/msm/ChickenCoverImage.png`} alt="Something is Wrong with the Chickens" />
+            <CldImage width="200" height="200" src={`https://res.cloudinary.com/djr5bxwfk/image/upload/v1687288452/samples/msm/PlaytestCoverImage.jpg`} alt="Schroedinger's Cat" />
+            <CldImage width="200" height="200" src={`https://res.cloudinary.com/djr5bxwfk/image/upload/v1687285101/samples/msm/WanderhomeCoverImage.png`} alt="Wanderhome" />
+            <CldImage width="200" height="200" src={`https://res.cloudinary.com/djr5bxwfk/image/upload/v1686779328/samples/msm/honeyHeistCoverImage.png`} alt="Honey Heist" />
+            <CldImage width="200" height="200" src={`https://res.cloudinary.com/djr5bxwfk/image/upload/v1686270073/samples/msm/DieCoverImage.png`} alt="DIE" />
+            <CldImage width="200" height="200" src={`https://res.cloudinary.com/djr5bxwfk/image/upload/v1687291351/samples/msm/goodSocietyCoverImage.png`} alt="Good Society" />       
+        </div>
+      </Link>
+
+      {/* <div className="carousel w-full m-4">
       <div id="slide1" className="carousel-item relative w-full">
         <Link className="w-7/12 lg:w-5/12 h-auto m-auto" href={'/myfirstdungeon'}>
           <CldImage width="1024" height="1024" src={'https://res.cloudinary.com/djr5bxwfk/image/upload/v1686269652/samples/msm/TenCandlesCoverImage.jpg'} alt='TenCandles' />
@@ -114,7 +126,7 @@ export default function Home() {
           <a href="#slide1" className="btn btn-circle">❯</a>
         </div>
       </div>
-    </div>
+    </div> */}
 
     </main>
   )
