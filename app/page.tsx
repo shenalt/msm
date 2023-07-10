@@ -18,8 +18,8 @@ export default function Home() {
           </p>
         </div>
         <div className='flex flex-row justify-center items-center my-4'>
-          <Link className='w-36' href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target='_blank'><button className='p-2 m-2 font-bold bg-patreonOrange text-whiteColor hover:animate-pulseFP'>Join our Patreon           </button></Link>
-          <Link className='w-36' href={'https://twentysidednewsletter.substack.com/'} target='_blank'><button className='p-2 m-2 font-bold bg-newsletterPurple text-whiteColor hover:animate-pulseFP'>Subscribe to the Newsletter</button></Link>
+          <Link href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-patreonOrange text-whiteColor hover:animate-pulseFP'>Join our Patreon</button></Link>
+          <Link href={'https://twentysidednewsletter.substack.com/'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-newsletterPurple text-whiteColor hover:animate-pulseFP'>Subscribe to the Newsletter</button></Link>
         </div>
       </div>
       {/* DESKTOP */}
@@ -41,8 +41,8 @@ export default function Home() {
           with the goal of bringing you even more TTRPG content, and this is the absolute best place to keep up to date with each exciting new venture. 
         </p>
         <div className='flex flex-row justify-center items-center my-4 lg:hidden'>
-          <Link className='w-36' href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target='_blank'><button className='p-2 m-2 font-bold bg-patreonOrange text-whiteColor hover:animate-pulseFP'>Join our Patreon           </button></Link>
-          <Link className='w-36' href={'https://twentysidednewsletter.substack.com/'} target='_blank'><button className='p-2 m-2 font-bold bg-newsletterPurple text-whiteColor hover:animate-pulseFP'>Subscribe to the Newsletter</button></Link>
+          <Link href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-patreonOrange text-whiteColor hover:animate-pulseFP'>Join our Patreon</button></Link>
+          <Link href={'https://twentysidednewsletter.substack.com/'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-newsletterPurple text-whiteColor hover:animate-pulseFP'>Subscribe to the Newsletter</button></Link>
         </div>
         <p className='m-8 text-lg'>
           P.S. Our My First Dungeon Patreon, The Dice Pool, is now live!

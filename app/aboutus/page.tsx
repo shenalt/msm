@@ -11,7 +11,7 @@ export default function AboutUs(){
     return(
         <div className="z-10 w-full flex flex-col items-center">
             <h1 className="my-8 mx-4 text-9xl hover:text-msmRed transition-all duration-500 text-center">WHO WE ARE</h1>
-            <div className="text-lg flex flex-col my-8 mx-8 w-full 2xl:w-3/4 m-auto border-t border-b border-t-msmBlue border-b-msmRed hover:text-msmRed hover:border-t-msmRed transition-all duration-500">
+            <div className="text-lg flex flex-col my-2 mx-8 w-full 2xl:w-3/4 m-auto border-t border-b border-t-msmBlue border-b-msmRed hover:text-msmRed hover:border-t-msmRed transition-all duration-500">
                 {/* <div className="w-3/4 m-auto border-t border-b border-t-msmBlue border-b-msmRed"> */}
                     <h1 className="m-4">Many Sided Media is a podcasting company that aims to build and grow a community of TTRPG players, creators, and fans through a variety of game-themed content.</h1>
                     <h1 className="m-4">
@@ -24,7 +24,7 @@ export default function AboutUs(){
                 {/* </div> */}
             </div>
 
-            <div className="flex flex-col 2xl:flex-row w-full 2xl:w-3/4 my-8 p-8 border-b border-b-msmBlue">
+            <div className="flex flex-col 2xl:flex-row w-full 2xl:w-3/4 p-8 border-b border-b-msmBlue">
                 <Image src={brian} alt="Headshot of Brian Flaherty" className="w-full 2xl:w-2/5"/>
                 <div>
                     <h1 className="text-center text-4xl text-msmRed mt-4 mb-2">Brian Flaherty</h1>
@@ -35,7 +35,7 @@ export default function AboutUs(){
                     </p>                   
                 </div>
             </div>
-            <div className="flex flex-col 2xl:flex-row w-full 2xl:w-3/4 my-8 p-8 border-b border-b-msmYellow">
+            <div className="flex flex-col 2xl:flex-row w-full 2xl:w-3/4 p-8 border-b border-b-msmYellow">
                 <Image src={elliot} alt="Headshot of Elliot Davis" className="w-full 2xl:w-2/5"/>
                 <div>
                     <h1 className="text-center text-4xl text-msmBlue mt-4 mb-2">Elliot Davis</h1>
@@ -47,10 +47,10 @@ export default function AboutUs(){
                     </p>
                 </div>
             </div>
-            <div className="flex flex-col 2xl:flex-row w-full 2xl:w-3/4 my-8 p-8 border-b border-b-msmRed">
+            <div className="flex flex-col 2xl:flex-row w-full 2xl:w-3/4 p-8 border-b border-b-msmRed">
                 <Image src={aiya} alt="Headshot of Shenuque Tissera" className="w-full 2xl:w-2/5"/>
                 <div>
-                    <h1 className="text-center text-4xl text-msmYellow my-4">Shenuque Tissera</h1>
+                    <h1 className="text-center text-4xl text-msmYellow mt-4 mb-2">Shenuque Tissera</h1>
                     <h3 className="text-lg text-center text-msmYellow">(he/him)</h3>
                     <p className="my-8 mx-2 2xl:mx-8 text-lg hover:text-msmYellow transition-all duration-500">
                         is an actor, writer, and stand-up comedian born and raised in Staten Island, New York. He plays 'Jaylen' in the theatrical production of The Art of Killin It! and has previously written 
@@ -61,7 +61,7 @@ export default function AboutUs(){
                     </p>
                 </div>
             </div>
-            <div className="flex flex-col 2xl:flex-row w-full 2xl:w-3/4 my-8 p-8 border-b-[1px]">
+            <div className="flex flex-col 2xl:flex-row w-full 2xl:w-3/4 p-8 border-b-[1px]">
                 <Image src={abby} alt="Headshot of Abby Hepworth" className="w-full 2xl:w-2/5"/>
                 <div>
                     <h1 className="text-center text-4xl text-msmRed mt-4 mb-2">Abby Hepworth</h1>
