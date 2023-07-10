@@ -2,10 +2,10 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import elliot from "../../public/elliotHeadshot.jpg"
-import brian from "../../public/brianHeadshot.png"
-import abby from "../../public/natashaHeadshot.jpg"
-import aiya from "../../public/aiyaHeadshot.jpg"
+import elliot from "../../public/elliot_border.jpg"
+import brian from "../../public/brian_border.jpg"
+import abby from "../../public/abby_border.jpg"
+import aiya from "../../public/shenuque_border.jpg"
 
 export default function AboutUs(){
     return(
