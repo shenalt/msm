@@ -12,8 +12,8 @@ export default function Home() {
       <div className='hidden lg:flex flex-col w-full lg:w-2/3 mx-4 mt-4 mb-1 border-t border-b border-t-msmRed border-b-msmBlue justify-evenly items-center'>
         <div className='w-1/2'>
           <p className='my-4 text-lg'>
-            Hello, and welcome to Many Sided Media! You may know us best as the team behind My First Dungeon, the Twenty Sided Podcast, and the Twenty Sided Newsletter. 
-            But with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
+            Hello, and welcome to Many Sided Media! You may know us best as the team behind My First Dungeon, the Twenty Sided Podcast, and the Twenty Sided Newsletter. But 
+            with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
             with the goal of bringing you even more TTRPG content, and this is the absolute best place to keep up to date with each exciting new venture. 
           </p>
         </div>
