@@ -4,6 +4,7 @@ import Link from "next/link"
 
 export default function Footer(){
     return(
+        // jhf
         <div className="w-full h-40 md:h-30 bg-msmRed flex flex-col md:flex-row items-center justify-between font-rnf">
             <p className="text-xs m-4 md:mx-8 md:text-lg"><i>Many Sided Media 2023</i> <span className="font-serif">©️</span></p>
             <div className="flex flex-row flex-wrap justify-center items-center gap-8 mx-8 my-2">
