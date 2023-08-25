@@ -3,7 +3,7 @@ import React from 'react'
 import Link from "next/link"
 import myFirstDungeon from "../../public/myFirstDungeon/myFirstDungeonTwo.png"
 import { PrismaClient } from "@prisma/client"
-import {FaSpotify, FaAmazon, FaRssSquare } from "react-icons/fa"
+import {FaSpotify, FaAmazon, } from "react-icons/fa"
 import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic, SiIheartradio} from "react-icons/si"
 import { Cast } from "../types/CastType"
 
@@ -70,9 +70,6 @@ export default async function MyFirstDungeon(){
                 <Link href={"https://www.iheart.com/podcast/269-my-first-dungeon-114084825/"} target="_blank">
                     <SiIheartradio className="cursor-pointer hover:fill-heartRadioRed hover:scale-150 transition-all duration-500" size={70} />
                 </Link>
-                <Link href={"https://anchor.fm/s/e6fb2638/podcast/rss"} target="_blank">
-                    <FaRssSquare className="cursor-pointer hover:fill-rssOrange hover:scale-150 transition-all duration-500" size={70} />
-                </Link>
                 {/* <button 
                     className="cursor-pointer hover:fill-heartRadioRed hover:scale-150 transition-all duration-500"          
                     onClick={() => 
@@ -89,7 +86,7 @@ export default async function MyFirstDungeon(){
             </div> 
 
             {data.map((show, index) => (
-                <div className={`collapse w-11/12 md:w-4/6 border rounded-box border-base-300 collapse-arrow
+                <div className={`collapse w-11/12 md:w-10/12 lg:w-4/6 border rounded-box border-base-300 collapse-arrow
                     ${
                         show.showId === "1" ? "bg-dieColor" : 
                         show.showId === "2" ? "bg-anamnesisColor" : 
@@ -117,13 +114,13 @@ export default async function MyFirstDungeon(){
                                 <h1 className={`${index === 1 ? "hidden" : ""} text-center ${show.showId === "8" ? "text-msmRed" : "text-msmRedAnalagYellow"} text-5xl my-4`}>CAST</h1>
                                 {show.castMembers.map((cast) => (    
                                     <>                           
-                                        <h2 className={`${cast.name === "OST" || cast.name === "Produced" ? "" : "hidden"} text-base text-center my-2`} key={cast.castId}>{cast.name} by {cast.role}</h2>
+                                        <h2 className={`${cast.name === "OST" || cast.name === "Produced" ? "" : "hidden"} text-base md:text-sm lg:text-base text-center my-2`} key={cast.castId}>{cast.name} by {cast.role}</h2>
                                         <h2 className={`${cast.name === "OST" || cast.name === "Produced" ? "hidden" : ""} ${show.showId === "8" ? "text-blackColor" : ""} text-base text-center my-2`} key={cast.castId}>{cast.name} as {cast.role}</h2>
                                     </>
                                 ))}
                                 {/* ****** TEMPORARY FIX for having cast/crew for DIE ****** */}
                             </div>
-                            <p className={`m-4 text-2xl ${show.showId === "8" ? "text-blackColor" : ""}`}>{show.description}</p>
+                            <p className={`m-4 text-2xl md:text-lg lg:text-2xl ${show.showId === "8" ? "text-blackColor" : ""}`}>{show.description}</p>
                         </div>
                         {/* <div className="flex flex-col md:flex-row items-center justify-around my-8">
                             

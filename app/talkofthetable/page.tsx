@@ -1,8 +1,8 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import {FaSpotify, FaAmazon, } from "react-icons/fa"
-import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic, SiIheartradio } from "react-icons/si"
+import {FaSpotify, FaAmazon, FaRssSquare, } from "react-icons/fa"
+import { SiApplepodcasts, SiCastbox, SiPocketcasts, SiRadiopublic, SiIheartradio } from "react-icons/si"
 
 export default function TalkOfTheTable(){
     return(
@@ -37,6 +37,9 @@ export default function TalkOfTheTable(){
                 </Link>
                 <Link href={"https://radiopublic.com/talk-of-the-table-Wdr40L"} target="_blank">
                     <SiRadiopublic className="cursor-pointer hover:fill-radioPublicRed hover:scale-150 transition-all duration-500" size={70} />
+                </Link>
+                <Link href={"https://anchor.fm/s/e6fb2638/podcast/rss"} target="_blank">
+                    <FaRssSquare className="cursor-pointer hover:fill-rssOrange hover:scale-150 transition-all duration-500" size={70} />
                 </Link>
             </div>
 
