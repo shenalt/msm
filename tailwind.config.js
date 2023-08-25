@@ -60,6 +60,7 @@ module.exports = {
       amazonOrange: '#FF9800',
       castboxOrange: '#F55B23',
       googleBlue: '#4285F4',
+      heartRadioRed: '#C6002B',
       pocketCastRed: '#F43E37',
       radioPublicRed: '#CE262F',
       msmRed: '#EC5151',
