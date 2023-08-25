@@ -1,11 +1,10 @@
 import Image from "next/image"
 import React from 'react'
-import { CldImage } from "next-cloudinary"
 import Link from "next/link"
 import myFirstDungeon from "../../public/myFirstDungeon/myFirstDungeonTwo.png"
 import { PrismaClient } from "@prisma/client"
-import {FaSpotify, FaAmazon, } from "react-icons/fa"
-import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic, } from "react-icons/si"
+import {FaSpotify, FaAmazon, FaRssSquare } from "react-icons/fa"
+import { SiApplepodcasts, SiCastbox, SiGooglepodcasts, SiPocketcasts, SiRadiopublic, SiIheartradio} from "react-icons/si"
 import { Cast } from "../types/CastType"
 
 const fetchShows = async () => {
@@ -46,7 +45,7 @@ export default async function MyFirstDungeon(){
                 </p>
             </div> 
             <p className="text-2xl m-auto text-center my-8">Listen to My First Dungeon here:</p>
-            <div className="flex flex-row flex-wrap gap-20 items-center justify-center my-8">
+            <div className="flex flex-row flex-wrap gap-20 items-center justify-center m-8">
                 <Link href={"https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088"} target="_blank">
                     <SiApplepodcasts className="cursor-pointer hover:fill-applePurple hover:scale-150 transition-all duration-500" size={70} />
                 </Link>
@@ -68,10 +67,29 @@ export default async function MyFirstDungeon(){
                 <Link href={"https://radiopublic.com/my-first-dungeon-GZvaRE"} target="_blank">
                     <SiRadiopublic className="cursor-pointer hover:fill-radioPublicRed hover:scale-150 transition-all duration-500" size={70} />
                 </Link>
+                <Link href={"https://www.iheart.com/podcast/269-my-first-dungeon-114084825/"} target="_blank">
+                    <SiIheartradio className="cursor-pointer hover:fill-heartRadioRed hover:scale-150 transition-all duration-500" size={70} />
+                </Link>
+                <Link href={"https://anchor.fm/s/e6fb2638/podcast/rss"} target="_blank">
+                    <FaRssSquare className="cursor-pointer hover:fill-rssOrange hover:scale-150 transition-all duration-500" size={70} />
+                </Link>
+                {/* <button 
+                    className="cursor-pointer hover:fill-heartRadioRed hover:scale-150 transition-all duration-500"          
+                    onClick={() => 
+                        {navigator.clipboard
+                            .writeText("https://anchor.fm/s/e6fb2638/podcast/rss")
+                            .then(() => {
+                                alert("RSS link copied");
+                            })
+                            .catch(() => {
+                                alert("Something went wrong");
+                            })
+                        }}>                  
+                </button> */}               
             </div> 
 
             {data.map((show, index) => (
-                <div className={`collapse w-11/12 sm:w-4/6 border rounded-box border-base-300 collapse-arrow 
+                <div className={`collapse w-11/12 md:w-4/6 border rounded-box border-base-300 collapse-arrow
                     ${
                         show.showId === "1" ? "bg-dieColor" : 
                         show.showId === "2" ? "bg-anamnesisColor" : 
@@ -83,6 +101,7 @@ export default async function MyFirstDungeon(){
                         show.showId === "8" ? "bg-societyColor" :
                         "bg-deplorableColor" 
                     }
+                    ${show.order === 1 ? "mt-8" : ""}
                     text-neutral-50`} key={show.title}
                 >
                     <input type="checkbox" />

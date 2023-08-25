@@ -63,6 +63,7 @@ module.exports = {
       heartRadioRed: '#C6002B',
       pocketCastRed: '#F43E37',
       radioPublicRed: '#CE262F',
+      rssOrange: "#F26522",
       msmRed: '#EC5151',
       msmRedAnalagYellow: '#ECEC51',
       msmRedAnalagGreen: '#9FEC51',

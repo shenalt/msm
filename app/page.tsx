@@ -9,20 +9,20 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-3 overflow-x-hidden">
       {/* DESKTOP */}
-      <div className='hidden lg:flex flex-col w-full lg:w-2/3 mx-4 mt-4 mb-1 border-t border-b border-t-msmRed border-b-msmBlue justify-evenly items-center'>
+      {/* <div className='hidden lg:flex flex-col w-full lg:w-2/3 mx-4 mt-4 mb-1 border-t border-b border-t-msmRed border-b-msmBlue justify-evenly items-center'> */}
         {/* <div className='w-1/2'> */}
-          <p className='m-8 text-lg'>
+          {/* <p className='m-8 text-lg'>
             Hello, and welcome to Many Sided Media! You may know us best as the team behind My First Dungeon, the Twenty Sided Podcast, and the Twenty Sided Newsletter. But 
             with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
             with the goal of bringing you even more TTRPG content, and this is the absolute best place to keep up to date with each exciting new venture. 
-          </p>
+          </p> */}
         {/* </div> */}
-        <div className='flex flex-column justify-center items-center my-4'>
-          <Link href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-patreonOrange text-whiteColor hover:animate-pulseFP'>Join our Patreon</button></Link>
+        {/* <div className='flex flex-column justify-center items-center my-4'>
+          <Link href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-patreonOrange text-whiteColor hover:animate-pulseFP'>Join our Patreon</button></Link> */}
           {/* <iframe src="https://twentysidednewsletter.substack.com/embed" width="480" height="320" className='border-2 border-solid bg-msmRed' frameBorder="0" scrolling="no"></iframe> */}
-          <Link href={'https://twentysidednewsletter.substack.com/'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-newsletterPurple text-whiteColor hover:animate-pulseFP'>Subscribe to the Newsletter</button></Link>
+          {/* <Link href={'https://twentysidednewsletter.substack.com/'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-newsletterPurple text-whiteColor hover:animate-pulseFP'>Subscribe to the Newsletter</button></Link>
         </div>
-      </div>
+      </div> */}
       {/* DESKTOP */}
       {/* MOBILE & TABLET */}
       {/* <div className='lg:hidden flex flex-row mt-4 md:gap-16'>
@@ -33,17 +33,18 @@ export default function Home() {
       <Image 
         src={frontPageLogo} 
         alt='Logo for Many Sided Media Company' 
-        className='w-full lg:w-1/3 h-auto animate-bounceFP' 
+        className='w-full lg:w-2/5 h-auto animate-bounceFP' 
       />
       <div className='w-full lg:w-2/3 m-4 border translate lg:border-l-0 lg:border-r-0 border-t-msmRed border-b-msmBlue border-l-msmYellow border-r-msmYellow'>
-        <p className='lg:hidden m-8 text-lg'>
+        <p className='m-8 text-lg'>
           Hello, and welcome to Many Sided Media! You may know us best as the team behind My First Dungeon, the Twenty Sided Podcast, and the Twenty Sided Newsletter
           . But with a love of games as big as ours, you know we couldn’t just stop there. We’ve got big plans for the future, 
           with the goal of bringing you even more TTRPG content, and this is the absolute best place to keep up to date with each exciting new venture. 
         </p>
-        <div className='flex flex-row justify-center items-center my-4 lg:hidden'>
-          <Link href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-patreonOrange text-whiteColor hover:animate-pulseFP'>Join our Patreon</button></Link>
-          <Link href={'https://twentysidednewsletter.substack.com/'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-newsletterPurple text-whiteColor hover:animate-pulseFP'>Subscribe to the Newsletter</button></Link>
+        <div className='flex flex-col justify-center items-center my-4'>
+          <iframe src="https://twentysidednewsletter.substack.com/embed" className='mt-4' width="95%" height="320" style={{border:'1px solid #EEE', background:'white'}} allowTransparency={true} frameBorder="0" scrolling="no"></iframe>
+          <Link href={'https://www.patreon.com/MyFirstDungeonPod/creators'} target='_blank' className='w-[95%]'><button className='p-2 my-4 text-xl w-full h-16 font-bold bg-patreonOrange text-whiteColor hover:animate-pulseFP'>Join our Patreon</button></Link>
+          {/* <Link href={'https://twentysidednewsletter.substack.com/'} target='_blank'><button className='p-2 m-2 w-36 h-16 font-bold bg-newsletterPurple text-whiteColor hover:animate-pulseFP'>Subscribe to the Newsletter</button></Link> */}
         </div>
         <p className='m-8 text-lg'>
           P.S. Our My First Dungeon Patreon, The Dice Pool, is now live!
