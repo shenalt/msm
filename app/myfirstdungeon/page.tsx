@@ -122,7 +122,7 @@ export default async function MyFirstDungeon(){
                                 ))}
                                 {/* ****** TEMPORARY FIX for having cast/crew for DIE ****** */}
                             </div>
-                            <p className={`m-4 text-2xl md:text-base lg:text-2xl ${show.showId === "8" ? "text-blackColor" : ""}`}>{show.description}</p>
+                            <p className={`m-4 text-2xl md:text-md lg:text-base ${show.showId === "8" ? "text-blackColor" : ""}`}>{show.description}</p>
                         </div>
                         {/* <div className="flex flex-col md:flex-row items-center justify-around my-8">
                             
