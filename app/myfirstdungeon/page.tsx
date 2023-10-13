@@ -96,7 +96,9 @@ export default async function MyFirstDungeon(){
                         show.showId === "6" ? "bg-schroedingerColor" :
                         show.showId === "7" ? "bg-chickensColor" :
                         show.showId === "8" ? "bg-societyColor" :
-                        "bg-deplorableColor" 
+                        show.showId === "9" ? "bg-deplorableColor" :
+                        show.showId === "10" ? "bg-yazebasColor" :
+                        "bg-orbitalColor" 
                     }
                     ${show.order === 1 ? "mt-8" : ""}
                     text-neutral-50`} key={show.title}
@@ -120,7 +122,7 @@ export default async function MyFirstDungeon(){
                                 ))}
                                 {/* ****** TEMPORARY FIX for having cast/crew for DIE ****** */}
                             </div>
-                            <p className={`m-4 text-2xl md:text-lg lg:text-2xl ${show.showId === "8" ? "text-blackColor" : ""}`}>{show.description}</p>
+                            <p className={`m-4 text-2xl md:text-base lg:text-2xl ${show.showId === "8" ? "text-blackColor" : ""}`}>{show.description}</p>
                         </div>
                         {/* <div className="flex flex-col md:flex-row items-center justify-around my-8">
                             

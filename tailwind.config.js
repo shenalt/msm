@@ -96,6 +96,8 @@ module.exports = {
       deplorableColor: "#AD87E4",
       titanfallColor: "#3C5871",
       prisonersColor: "#DA4225",
+      yazebasColor: "#A4678E",
+      orbitalColor: "#57698D",
     },
   },
   plugins: [require("daisyui")],
