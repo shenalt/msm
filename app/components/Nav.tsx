@@ -78,6 +78,9 @@ export default function Nav(){
                             <Link href={'/myfirstdungeon'}>
                                 <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 my-2">My First Dungeon</li>
                             </Link>
+                            <Link href={'/talkofthetable'}>
+                                <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 my-2">Talk of the Table</li>
+                            </Link>
                             <Link href={'/twentysidedpodcast'}>
                                 <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 my-2">Twenty Sided Podcast</li>
                             </Link>
@@ -163,6 +166,15 @@ export default function Nav(){
                                     }}
                                 >
                                     <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 sm:p-1">My First Dungeon</li>
+                                </Link>
+                                <Link 
+                                    href={'/talkofthetable'}
+                                    onClick={() => {
+                                        setIsOpen(!isOpen);
+                                        setScroll(isOpen);
+                                    }}
+                                >
+                                    <li className="hover:text-msmRed hover:scale-125 transition-all duration-500 sm:p-1">Talk of the Table</li>
                                 </Link>
                                 <Link 
                                     href={'/twentysidedpodcast'}
