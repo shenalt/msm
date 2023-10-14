@@ -25,7 +25,7 @@ const enableScroll = () => {
 
 export default function Nav(){
     const [isOpen, setIsOpen] = useState<boolean>(false)
-
+    // delete this comment
     const setScroll = (isOpen: boolean) => {
         if(!isOpen){
             disableScroll()
