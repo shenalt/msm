@@ -41,7 +41,7 @@ export default async function MyFirstDungeon(){
             <div className="w-full md:w-4/6 mx-4 my-6">
                 <p className="m-auto p-2 text-lg">
                     My First Dungeon is the tabletop role-playing podcast where we help players learn new games and make each one better than the last. Each season we choose a new game and a different 
-                    GM to run it. Then we circle back around to discuss what went right, what went wrong, and how we can make our next game even better.
+                    GM to run it, then we circle back around to discuss what went right, what went wrong, and how we can make our next game even better.
                 </p>
             </div> 
             <p className="text-2xl m-auto text-center my-8">Listen to My First Dungeon here:</p>
