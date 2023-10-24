@@ -88,7 +88,8 @@ export default function Nav(){
                     </div>
                     <Link target="_blank" href={'https://www.patreon.com/MyFirstDungeonPod/creators'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-patreonOrange hover:scale-125 transition-all duration-100">Patreon</li></Link>
                     <Link target="_blank" href={'https://twentysidednewsletter.substack.com/'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-newsletterPurple hover:scale-125 transition-all duration-100">Newsletter</li></Link>
-                    <Link href={'/aboutus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">About Us</li></Link>
+                    <Link href={'/contactus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:bg-msmRed hover:scale-125 transition-all duration-100">Press</li></Link>
+                    <Link href={'/aboutus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">Aboutdd Us</li></Link>
                     <Link href={'/contactus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Work With Us</li></Link>
                 </ul>
             </div>

@@ -37,7 +37,7 @@ export default async function MyFirstDungeon(){
 
     return(
         <div className="z-10 w-full flex flex-col items-center">
-            <Image src={myFirstDungeon} alt="My First Dungeon Logo" className="w-11/12 lg:w-1/3 h-4/5 m-auto my-6" />
+            <Image src={myFirstDungeon} alt="My First Dungeon" className="w-11/12 lg:w-1/3 h-4/5 m-auto my-6" />
             <div className="w-full md:w-4/6 mx-4 my-6">
                 <p className="m-auto p-2 text-lg">
                     My First Dungeon is the tabletop role-playing podcast where we help players learn new games and make each one better than the last. Each season we choose a new game and a different 
