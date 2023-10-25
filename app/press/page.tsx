@@ -22,7 +22,7 @@ export default function Press(){
                     <div className="m-auto p-4 flex flex-col w-3/4">
                         {/* NJ Webfest Winner */}
                             <div className="flex flex-col lg:flex-row m-4">
-                                <Link href={'https://www.newjerseywebfest.com/2023-award-winners-audio-fiction'}>
+                                <Link href={'https://www.newjerseywebfest.com/2023-award-winners-audio-fiction'} target="_blank">
                                     <Image src={njWebfestWinner} width={400} height={400} alt="NJ Webfest" />
                                 </Link>                                
                                 <div className="flex flex-col justify-center m-1">
@@ -34,7 +34,7 @@ export default function Press(){
 
                         {/* NJ Webfest Nominee */}
                             <div className="flex flex-col lg:flex-row m-4">
-                                <Link href={'https://www.newjerseywebfest.com/'}>
+                                <Link href={'https://www.newjerseywebfest.com/'} target="_blank">
                                     <Image src={njWebfestNom} width={400} height={400} alt="NJ Webfest" />
                                 </Link>                                
                                 <div className="flex flex-col justify-center m-1">
@@ -48,7 +48,7 @@ export default function Press(){
 
                         {/* Fandomentals Article */}
                         <div className="flex flex-col lg:flex-row m-4">
-                            <Link href={'https://www.thefandomentals.com/my-first-dungeon-yazebas-bb-interview/'}>
+                            <Link href={'https://www.thefandomentals.com/my-first-dungeon-yazebas-bb-interview/'} target="_blank">
                                 <Image src={fandomentals} width={400} height={400} alt="Fandomentals" />
                             </Link>                           
                             <div className="flex flex-col justify-center m-1">
@@ -67,7 +67,7 @@ export default function Press(){
 
                         {/* Gizmodo Article */}
                         <div className="flex flex-col lg:flex-row m-4">
-                            <Link href={'https://gizmodo.com/the-gaming-shelf-gubat-banwa-kickstarter-ttrpg-news-1850940756/slides/4'}>
+                            <Link href={'https://gizmodo.com/the-gaming-shelf-gubat-banwa-kickstarter-ttrpg-news-1850940756/slides/4'} target="_blank">
                                 <Image src={gizmodo} width={400} height={400} alt="Gizmodo" />
                             </Link>
                             <div className="flex flex-col justify-center m-1">
@@ -86,7 +86,7 @@ export default function Press(){
 
                         {/* Gizmodo Article */}
                         <div className="flex flex-col lg:flex-row m-4">
-                            <Link href={'https://gizmodo.com/gaming-shelf-outsourced-planet-fist-my-first-dungeon-1850848324/slides/4'}>
+                            <Link href={'https://gizmodo.com/gaming-shelf-outsourced-planet-fist-my-first-dungeon-1850848324/slides/4'} target="_blank">
                                 <Image src={gizmodo} width={400} height={400} alt="Gizmodo" />
                             </Link>                            
                             <div className="flex flex-col justify-center m-1">
@@ -94,13 +94,13 @@ export default function Press(){
                                 <p className="flex justify-center items-center text-2xl p-4 font-bold">Actual Plays and Streams: Worlds Away; My First Dungeon: Gertrude’s Birthday Surprise; Dice Company; Wait, Roll That Again; Severed Sons</p>
                             </div>
                         </div>
-                        <div className="border-l border-l-msmBlue mx-2">
+                        <div className="border-l border-l-msmRed mx-2">
                             <h1 className="m-2 text-sm">
-                                Worlds Away—a new independent actual-play podcast—has just released its first episodes. The show’s first season, titled Convergence, takes place 250 years in our future. After 
-                                the end of humanity’s first interstellar civil war, the distant planets...
+                            “My First Dungeon Presents: Gertrude’s Birthday Surprise is an 8-part Yazeba’s Bed & Breakfast actual play limited series featuring a full cast from across the TTRPG community and 
+                            beyond, bespoke sound design, and original music. This season is our...
                             </h1>
                         </div>
-                        <p className="text-msmBlue hover:text-msmRed transition-all duration-500 text-center lg:text-left m-2"><Link href={'https://gizmodo.com/gaming-shelf-outsourced-planet-fist-my-first-dungeon-1850848324/slides/4'}>(full article)</Link></p>
+                        <p className="text-msmRed hover:text-msmBlue transition-all duration-500 text-center lg:text-left m-2"><Link href={'https://gizmodo.com/gaming-shelf-outsourced-planet-fist-my-first-dungeon-1850848324/slides/4'}>(full article)</Link></p>
                         {/* Gizmodo Article */}
                     </div>
                 {/* </div> */}
