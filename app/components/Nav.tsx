@@ -88,7 +88,7 @@ export default function Nav(){
                     </div>
                     <Link target="_blank" href={'https://www.patreon.com/MyFirstDungeonPod/creators'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-patreonOrange hover:scale-125 transition-all duration-100">Patreon</li></Link>
                     <Link target="_blank" href={'https://twentysidednewsletter.substack.com/'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-newsletterPurple hover:scale-125 transition-all duration-100">Newsletter</li></Link>
-                    {/* <Link href={'/contactus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:bg-msmRed hover:scale-125 transition-all duration-100">Press</li></Link> */}
+                    <Link href={'/press'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmRed hover:scale-125 transition-all duration-100">Press</li></Link>
                     <Link href={'/aboutus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">About Us</li></Link>
                     <Link href={'/contactus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Work With Us</li></Link>
                 </ul>
@@ -151,7 +151,7 @@ export default function Nav(){
                                 }}
                             >
                                 <p 
-                                    className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 hover:text-msmYellow transition-all text-2xl font-bold tracking-wide no-underline text-center mx-2 sm:text-3xl`}
+                                    className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 hover:text-msmYellow transition-all text-xl font-bold tracking-wide no-underline text-center mx-2 sm:text-3xl`}
                                     tabIndex={0}
                                 >
                                     OUR SHOWS
@@ -201,7 +201,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-patreonOrange duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-patreonOrange duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
                                     PATREON
                                 </p>
                             </motion.div>
@@ -219,11 +219,32 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-newsletterPurple duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-newsletterPurple duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
                                     NEWSLETTER
                                 </p>
                             </motion.div>
                         </Link>
+                        <Link 
+                            href={'/press'}
+                            onClick={() => {
+                                setIsOpen(!isOpen);
+                                setScroll(isOpen);
+                            }}
+                        >
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.5 },
+                                }}
+                                whileTap={{ 
+                                    scale: 0.9, 
+                                }}
+                            >
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                    PRESS
+                                </p>
+                            </motion.div>
+                        </Link>  
                         <Link 
                             href={'/aboutus'}
                             onClick={() => {
@@ -240,7 +261,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmBlue duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
                                     ABOUT US
                                 </p>
                             </motion.div>
@@ -261,7 +282,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-2xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmRed duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
                                     WORK WITH US
                                 </p>
                             </motion.div>
