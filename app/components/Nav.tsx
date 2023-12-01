@@ -88,10 +88,10 @@ export default function Nav(){
                     </div>
                     <Link target="_blank" href={'https://www.patreon.com/MyFirstDungeonPod/creators'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-patreonOrange hover:scale-125 transition-all duration-100">Patreon</li></Link>
                     <Link target="_blank" href={'https://twentysidednewsletter.substack.com/'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-newsletterPurple hover:scale-125 transition-all duration-100">Newsletter</li></Link>
-                    <Link target="_blank" href={'https://manysidedmedia.store/'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmRed hover:scale-125 transition-all duration-100">Store</li></Link>
-                    <Link href={'/press'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmRed hover:scale-125 transition-all duration-100">Press</li></Link>
-                    <Link href={'/aboutus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">About Us</li></Link>
-                    <Link href={'/contactus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Work With Us</li></Link>
+                    <Link target="_blank" href={'https://manysidedmedia.store/'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">Store</li></Link>
+                    <Link href={'/press'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Press</li></Link>
+                    <Link href={'/aboutus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmRed hover:scale-125 transition-all duration-100">About Us</li></Link>
+                    <Link href={'/contactus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">Work With Us</li></Link>
                 </ul>
             </div>
         {/* REGULAR NAV FOR DESKTOP */}
@@ -238,7 +238,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-newsletterPurple duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmRed duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
                                     STORE
                                 </p>
                             </motion.div>
@@ -259,7 +259,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmBlue duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
                                     PRESS
                                 </p>
                             </motion.div>
@@ -280,7 +280,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmBlue duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
                                     ABOUT US
                                 </p>
                             </motion.div>
