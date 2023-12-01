@@ -88,6 +88,7 @@ export default function Nav(){
                     </div>
                     <Link target="_blank" href={'https://www.patreon.com/MyFirstDungeonPod/creators'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-patreonOrange hover:scale-125 transition-all duration-100">Patreon</li></Link>
                     <Link target="_blank" href={'https://twentysidednewsletter.substack.com/'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-newsletterPurple hover:scale-125 transition-all duration-100">Newsletter</li></Link>
+                    <Link target="_blank" href={'https://manysidedmedia.store/'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmRed hover:scale-125 transition-all duration-100">Store</li></Link>
                     <Link href={'/press'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmRed hover:scale-125 transition-all duration-100">Press</li></Link>
                     <Link href={'/aboutus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmBlue hover:scale-125 transition-all duration-100">About Us</li></Link>
                     <Link href={'/contactus'}><li className="lg:mx-4 xl:mx-8 mx-8 my-1 cursor-pointer hover:text-msmYellow hover:scale-125 transition-all duration-100">Work With Us</li></Link>
@@ -139,7 +140,7 @@ export default function Nav(){
                             <Link href={'https://podcasts.apple.com/us/podcast/my-first-dungeon/id1601290088'} target="_blank"><SiApplepodcasts className="cursor-pointer hover:fill-applePurple transition-all duration-500" size={56} /></Link>
                         </div>
                         {/* TABLET */}
-                        <div className="dropdown dropdown-end cursor-pointer my-6 sm:my-10">
+                        <div className="dropdown dropdown-end cursor-pointer my-4 sm:my-6">
                             <motion.div 
                                 className="flex flex-row items-center justify-center"
                                 whileHover={{
@@ -151,7 +152,7 @@ export default function Nav(){
                                 }}
                             >
                                 <p 
-                                    className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 hover:text-msmYellow transition-all text-xl font-bold tracking-wide no-underline text-center mx-2 sm:text-3xl`}
+                                    className={`${isOpen ? "opacity-100" : "opacity-0"} duration-1000 hover:text-msmYellow transition-all text-lg font-bold tracking-wide no-underline text-center mx-2`}
                                     tabIndex={0}
                                 >
                                     OUR SHOWS
@@ -201,7 +202,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-patreonOrange duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-patreonOrange duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
                                     PATREON
                                 </p>
                             </motion.div>
@@ -219,8 +220,26 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-newsletterPurple duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-newsletterPurple duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
                                     NEWSLETTER
+                                </p>
+                            </motion.div>
+                        </Link>
+                        <Link 
+                            href={'https://manysidedmedia.store/'}
+                            target="_blank"
+                        >
+                            <motion.div
+                                whileHover={{
+                                    scale: 1.2,
+                                    transition: { duration: 0.5 },
+                                }}
+                                whileTap={{ 
+                                    scale: 0.9, 
+                                }}
+                            >
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-newsletterPurple duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
+                                    STORE
                                 </p>
                             </motion.div>
                         </Link>
@@ -240,7 +259,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmYellow duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
                                     PRESS
                                 </p>
                             </motion.div>
@@ -261,7 +280,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmBlue duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmBlue duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
                                     ABOUT US
                                 </p>
                             </motion.div>
@@ -282,7 +301,7 @@ export default function Nav(){
                                     scale: 0.9, 
                                 }}
                             >
-                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmRed duration-1000 transition-all text-xl py-4 font-bold tracking-wide no-underline text-center my-6 sm:my-10 sm:text-3xl`}>
+                                <p className={`${isOpen ? "opacity-100" : "opacity-0"} hover:text-msmRed duration-1000 transition-all text-lg py-4 font-bold tracking-wide no-underline text-center my-4 sm:my-6`}>
                                     WORK WITH US
                                 </p>
                             </motion.div>
