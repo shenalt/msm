@@ -23,28 +23,17 @@ const fetchShows = async () => {
 
 export default async function MyFirstDungeon(){
 
-    // const data: {
-    //     showId: string; 
-    //     title: string; 
-    //     description: string; 
-    //     picture: string; 
-    //     spotifyLink: string; 
-    //     podcast: string;
-    //     color: string;
-    //     order: number;
-    //     castMembers: Cast[];
-    // }[] = await fetchShows()
-    const data = {
-        showId: "1",
-        title: "title",
-        description: "description",
-        picture: "picture", 
-        spotifyLink: "spotifyLink",
-        podcast: "podcast",
-        color: "color",
-        order: 1,
-        castMembers: [],
-    }
+    const data: {
+        showId: string; 
+        title: string; 
+        description: string; 
+        picture: string; 
+        spotifyLink: string; 
+        podcast: string;
+        color: string;
+        order: number;
+        castMembers: Cast[];
+    }[] = await fetchShows()
 
     return(
         <div className="z-10 w-full flex flex-col items-center">
